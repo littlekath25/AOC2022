@@ -1,8 +1,92 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:18:22 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m18 |[0m    a <- inputList.sum[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                      ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m             No implicit Ordering defined for B[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:30:63 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m30 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"forward"[0m)) => (horizontal + number, aim * number, aim)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                         ^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                 value startsWith is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:30:101 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m30 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"forward"[0m)) => (horizontal + number, aim * number, aim)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                                                          ^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mvalue + is not a member of Any, but could be made available as an extension method.[0m
 [0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m             where:    B is a type variable with constraint >: List[Int][0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m             .[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mOne of the following imports might make progress towards fixing the problem:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Fractional.Implicits.infixFractionalOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Integral.Implicits.infixIntegralOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Numeric.Implicits.infixNumericOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:30:115 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m30 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"forward"[0m)) => (horizontal + number, aim * number, aim)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                                                                               ^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mvalue * is not a member of Any, but could be made available as an extension method.[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mOne of the following imports might make progress towards fixing the problem:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Fractional.Implicits.infixFractionalOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Integral.Implicits.infixIntegralOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Numeric.Implicits.infixNumericOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:30:125 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m30 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"forward"[0m)) => (horizontal + number, aim * number, aim)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                                                                                             ^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                                   Found:    (aim : Any)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                                   Required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:31:63 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m31 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"up"[0m)) => (horizontal, depth, aim - number)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                         ^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                 value startsWith is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:31:85 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m31 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"up"[0m)) => (horizontal, depth, aim - number)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                                                     ^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                            Found:    (horizontal : Any)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                            Required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:31:97 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m31 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"up"[0m)) => (horizontal, depth, aim - number)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                                                                 ^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                                 Found:    (depth : Any)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                                 Required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:31:108 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m31 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"up"[0m)) => (horizontal, depth, aim - number)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                                                                        ^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mvalue - is not a member of Any, but could be made available as an extension method.[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mOne of the following imports might make progress towards fixing the problem:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Fractional.Implicits.infixFractionalOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Integral.Implicits.infixIntegralOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Numeric.Implicits.infixNumericOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:32:63 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m32 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"down"[0m)) => (horizontal, depth, aim + number)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                         ^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                 value startsWith is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:32:87 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m32 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"down"[0m)) => (horizontal, depth, aim + number)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                                                       ^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                            Found:    (horizontal : Any)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                            Required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:32:99 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m32 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"down"[0m)) => (horizontal, depth, aim + number)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                                                                   ^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                                 Found:    (depth : Any)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                                 Required: Int[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day02.scala:32:110 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m32 |[0m    [33mcase[0m ((horizontal, depth, aim), (instr, number)) [33mif[0m (instr.startsWith([31m"down"[0m)) => (horizontal, depth, aim + number)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                                                                          ^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mvalue + is not a member of Any, but could be made available as an extension method.[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mOne of the following imports might make progress towards fixing the problem:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Fractional.Implicits.infixFractionalOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Integral.Implicits.infixIntegralOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import math.Numeric.Implicits.infixNumericOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m12 errors found[0m

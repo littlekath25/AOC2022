@@ -1,8 +1,8 @@
 [0m[[0m[31merror[0m] [0m[0mscala.NotImplementedError: an implementation is missing[0m
 [0m[[0m[31merror[0m] [0m[0m	at scala.Predef$.$qmark$qmark$qmark(Predef.scala:344)[0m
-[0m[[0m[31merror[0m] [0m[0m	at AOC2023.Day01$package$.Day01Part2(Day01.scala:10)[0m
-[0m[[0m[31merror[0m] [0m[0m	at AOC2023.Day01$package$.Day01(Day01.scala:5)[0m
-[0m[[0m[31merror[0m] [0m[0m	at AOC2023.Day01.main(Day01.scala:3)[0m
+[0m[[0m[31merror[0m] [0m[0m	at AOC2023.Day02$package$.Day02Part2(Day02.scala:18)[0m
+[0m[[0m[31merror[0m] [0m[0m	at AOC2023.Day02$package$.Day02(Day02.scala:7)[0m
+[0m[[0m[31merror[0m] [0m[0m	at AOC2023.Day02.main(Day02.scala:5)[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)[0m
 [0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.reflect.Method.invoke(Method.java:578)[0m
 [0m[[0m[31merror[0m] [0m[0m	at sbt.Run.invokeMain(Run.scala:143)[0m
