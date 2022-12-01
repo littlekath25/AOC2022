@@ -22,11 +22,11 @@
 [0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
 [0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/katherine/Desktop/Personal/AOC2023/target/scala-3.2.1/classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: /Users/katherine/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-sbt-bridge/3.2.1/scala3-sbt-bridge-3.2.1.jar.[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 5ad73eb1 for Scala Compiler version 3.2.1[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 7627f6f7 for Scala Compiler version 3.2.1[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/katherine/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.2.1/scala3-library_3-3.2.1.jar:/Users/katherine/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/Users/katherine/Desktop/Personal/AOC2023/target/scala-3.2.1/classes[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.163855666 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.125184416 s[0m
 [0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m

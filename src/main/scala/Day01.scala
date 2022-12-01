@@ -6,20 +6,18 @@ import scala.io.Source
   Day01Part1
   Day01Part2
 
-val input = Source.fromResource("Day01.txt").mkString
+val input = Source.fromResource("Example.txt").mkString
 
 def Day01Part1 =
-  val output = 
-    (for (s <- input.split("\n\n").toList) 
-    yield { s.split("\n").map(_.toInt).toList }
-    ).filter(!_.isEmpty).map(_.sum).max
+  val combinedList: List[List[String]] = input.split("\n\n").toList.map(_.split("\n").toList)
+  val convertedList: List[Int] = combinedList.flatMap(_.map(_.toInt))
+  val answer: Int = convertedList.max
 
-  println(s"Day 1 - part 1: $output")
+  println(s"Day 1 - part 1: $answer")
 
 def Day01Part2 =
-  val output =
-    (for (s <- input.split("\n\n").toList) 
-    yield { s.split("\n").map(_.toInt).toList }
-    ).filter(!_.isEmpty).map(_.sum).sorted.reverse.take(3).sum
+  val combinedList: List[List[String]] = input.split("\n\n").toList.map(_.split("\n").toList)
+  val convertedList: List[Int] = combinedList.flatMap(_.map(_.toInt)).sorted.reverse
+  val answer: Int = convertedList.take(3).sum
 
-  println(s"Day 1 - part 2: ${output}")
+  println(s"Day 1 - part 2: $answer")
