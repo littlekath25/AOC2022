@@ -4768,3 +4768,968 @@ Nov 30, 2022 6:53:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellat
 WARNING: Unmatched cancel notification for request id 3714
 2022.11.30 18:53:35 INFO  compiling aoc2023 (1 scala source)
 2022.11.30 18:53:35 INFO  time: compiled aoc2023 in 0.23s
+2022.11.30 18:54:12 INFO  compiling aoc2023 (1 scala source)
+2022.11.30 18:54:12 INFO  time: compiled aoc2023 in 0.86s
+2022.11.30 18:54:21 INFO  compiling aoc2023 (1 scala source)
+2022.11.30 18:54:21 INFO  time: compiled aoc2023 in 0.4s
+2022.11.30 18:54:23 INFO  compiling aoc2023 (1 scala source)
+2022.11.30 18:54:23 INFO  time: compiled aoc2023 in 0.25s
+2022.11.30 18:54:43 INFO  shutting down Metals
+2022.11.30 18:54:43 INFO  Shut down connection with build server.
+2022.11.30 18:54:43 INFO  Shut down connection with build server.
+2022.12.01 05:50:54 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/katherine/Desktop/Personal/AOC2023/.metals/lsp.trace.json or /Users/katherine/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.12.01 05:50:55 INFO  logging to file /Users/katherine/Desktop/Personal/AOC2023/.metals/metals.log
+2022.12.01 05:50:55 INFO  Started: Metals version 0.11.9 in workspace '/Users/katherine/Desktop/Personal/AOC2023' for client Visual Studio Code 1.73.1.
+2022.12.01 05:50:57 INFO  time: initialize in 1.83s
+2022.12.01 05:51:03 INFO  Attempting to connect to the build server...
+2022.12.01 05:51:03 INFO  Bloop uses /Users/katherine/Library/Java/JavaVirtualMachines/corretto-17.0.4.1/Contents/Home defined at /Users/katherine/.bloop/bloop.json
+2022.12.01 05:51:03 INFO  skipping build import with status 'Installed'
+2022.12.01 05:51:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/katherine/Desktop/Personal/AOC2023/.metals/bsp.trace.json or /Users/katherine/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.12.01 05:51:09 INFO  Attempting to connect to the build server...
+2022.12.01 05:51:09 INFO  Bloop uses /Users/katherine/Library/Java/JavaVirtualMachines/corretto-17.0.4.1/Contents/Home defined at /Users/katherine/.bloop/bloop.json
+2022.12.01 05:51:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/katherine/Desktop/Personal/AOC2023/project/.metals/bsp.trace.json or /Users/katherine/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.12.01 05:51:09 INFO  time: Connected to build server in 6.58s
+2022.12.01 05:51:09 INFO  Connected to Build server: Bloop v1.5.4
+2022.12.01 05:51:10 INFO  time: Imported build in 0.29s
+2022.12.01 05:51:23 INFO  time: indexed workspace in 13s
+2022.12.01 05:51:24 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 05:51:35 INFO  time: compiled aoc2023 in 11s
+2022.12.01 06:03:46 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:03:47 INFO  time: compiled aoc2023 in 1.63s
+2022.12.01 06:03:54 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:03:56 INFO  time: compiled aoc2023 in 1.43s
+2022.12.01 06:03:56 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:03:57 INFO  time: compiled aoc2023 in 1.18s
+2022.12.01 06:04:00 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:04:01 INFO  time: compiled aoc2023 in 1.13s
+Dec 01, 2022 6:04:02 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2511)
+	at scala.meta.internal.pc.SignatureHelpProvider$.isValid(SignatureHelpProvider.scala:88)
+	at scala.meta.internal.pc.SignatureHelpProvider$.notCurrentApply(SignatureHelpProvider.scala:101)
+	at scala.meta.internal.pc.SignatureHelpProvider$.$anonfun$1(SignatureHelpProvider.scala:49)
+	at scala.collection.StrictOptimizedLinearSeqOps.loop$3(LinearSeq.scala:280)
+	at scala.collection.StrictOptimizedLinearSeqOps.dropWhile(LinearSeq.scala:282)
+	at scala.collection.StrictOptimizedLinearSeqOps.dropWhile$(LinearSeq.scala:278)
+	at scala.collection.immutable.List.dropWhile(List.scala:79)
+	at scala.meta.internal.pc.SignatureHelpProvider$.signatureHelp(SignatureHelpProvider.scala:49)
+
+2022.12.01 06:04:04 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:04:04 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:20: stale bloop error: unclosed string literal
+  println(s"${input")
+                   ^
+2022.12.01 06:04:04 INFO  time: compiled aoc2023 in 0.52s
+2022.12.01 06:04:06 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:20: stale bloop error: unclosed string literal
+  println(s"${input")
+                   ^
+2022.12.01 06:04:06 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:04:06 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:21: stale bloop error: unclosed string literal
+  println(s"${input(")
+                    ^
+2022.12.01 06:04:06 INFO  time: compiled aoc2023 in 0.58s
+2022.12.01 06:04:13 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:21: stale bloop error: unclosed string literal
+  println(s"${input(")
+                    ^
+2022.12.01 06:04:13 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:21: stale bloop error: unclosed string literal
+  println(s"${input(")
+                    ^
+2022.12.01 06:04:14 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:21: stale bloop error: unclosed string literal
+  println(s"${input(")
+                    ^
+2022.12.01 06:04:14 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:21: stale bloop error: unclosed string literal
+  println(s"${input(")
+                    ^
+2022.12.01 06:04:15 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:21: stale bloop error: unclosed string literal
+  println(s"${input(")
+                    ^
+2022.12.01 06:04:15 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:21: stale bloop error: unclosed string literal
+  println(s"${input(")
+                    ^
+2022.12.01 06:04:16 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:21: stale bloop error: unclosed string literal
+  println(s"${input(")
+                    ^
+2022.12.01 06:04:16 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:04:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:23: stale bloop error: '}' expected, but ')' found
+  println(s"${input(3))
+                      ^
+2022.12.01 06:04:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:15:1: stale bloop error: unindent expected, but eof found
+
+^
+2022.12.01 06:04:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:23: stale bloop error: '}' expected, but ')' found
+  println(s"${input(3))
+                      ^
+2022.12.01 06:04:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:15:1: stale bloop error: unindent expected, but eof found
+
+^
+2022.12.01 06:04:16 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:23: stale bloop error: '}' expected, but ')' found
+  println(s"${input(3))
+                      ^
+2022.12.01 06:04:16 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:15:1: stale bloop error: unindent expected, but eof found
+
+^
+2022.12.01 06:04:16 INFO  time: compiled aoc2023 in 0.91s
+2022.12.01 06:04:18 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:23: stale bloop error: '}' expected, but ')' found
+  println(s"${input(3))
+                      ^
+2022.12.01 06:04:18 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:15:1: stale bloop error: unindent expected, but eof found
+
+^
+2022.12.01 06:04:18 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:04:18 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:24: stale bloop error: unclosed string literal
+  println(s"${input(3)})
+                       ^
+2022.12.01 06:04:18 INFO  time: compiled aoc2023 in 0.29s
+2022.12.01 06:04:24 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:24: stale bloop error: unclosed string literal
+  println(s"${input(3)})
+                       ^
+2022.12.01 06:04:24 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:24: stale bloop error: unclosed string literal
+  println(s"${input(3)})
+                       ^
+2022.12.01 06:04:24 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:24: stale bloop error: unclosed string literal
+  println(s"${input(3)})
+                       ^
+2022.12.01 06:04:24 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:24: stale bloop error: unclosed string literal
+  println(s"${input(3)})
+                       ^
+2022.12.01 06:04:25 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:24: stale bloop error: unclosed string literal
+  println(s"${input(3)})
+                       ^
+2022.12.01 06:04:25 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:04:25 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:25: stale bloop error: unclosed string literal
+  println(s"${input(3)}"")
+                        ^
+2022.12.01 06:04:25 INFO  time: compiled aoc2023 in 0.31s
+2022.12.01 06:04:26 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:25: stale bloop error: unclosed string literal
+  println(s"${input(3)}"")
+                        ^
+2022.12.01 06:04:26 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:25: stale bloop error: unclosed string literal
+  println(s"${input(3)}"")
+                        ^
+2022.12.01 06:04:25 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:04:27 INFO  time: compiled aoc2023 in 0.89s
+2022.12.01 06:04:49 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:04:49 INFO  time: compiled aoc2023 in 0.91s
+2022.12.01 06:04:57 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:04:57 INFO  time: compiled aoc2023 in 0.73s
+2022.12.01 06:05:24 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:05:24 INFO  time: compiled aoc2023 in 0.34s
+2022.12.01 06:05:27 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: an identifier expected, but '(' found
+val input = Source.fromResource("Example.txt").getLines.().toList
+                                                        ^
+2022.12.01 06:05:27 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: an identifier expected, but '(' found
+val input = Source.fromResource("Example.txt").getLines.().toList
+                                                        ^
+2022.12.01 06:05:28 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:05:30 INFO  time: compiled aoc2023 in 1.19s
+2022.12.01 06:05:31 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:05:32 INFO  time: compiled aoc2023 in 1.31s
+2022.12.01 06:06:07 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:06:07 INFO  time: compiled aoc2023 in 0.58s
+2022.12.01 06:06:10 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:06:10 INFO  time: compiled aoc2023 in 0.53s
+2022.12.01 06:06:18 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:13: stale bloop error: value split is not a member of Iterator[String] - did you mean Iterator[String].splitAt?
+val input = Source.fromResource("Example.txt").getLines.split("\n").toList
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2022.12.01 06:06:18 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:13: stale bloop error: value split is not a member of Iterator[String] - did you mean Iterator[String].splitAt?
+val input = Source.fromResource("Example.txt").getLines.split("\n").toList
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2022.12.01 06:06:19 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:06:19 INFO  time: compiled aoc2023 in 0.22s
+2022.12.01 06:06:19 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: too many arguments for method getLines in class BufferedSource: (): Iterator[String]
+val input = Source.fromResource("Example.txt").getLines("").toList
+                                                        ^^
+2022.12.01 06:06:19 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: too many arguments for method getLines in class BufferedSource: (): Iterator[String]
+val input = Source.fromResource("Example.txt").getLines("").toList
+                                                        ^^
+2022.12.01 06:06:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: too many arguments for method getLines in class BufferedSource: (): Iterator[String]
+val input = Source.fromResource("Example.txt").getLines("").toList
+                                                        ^^
+2022.12.01 06:06:20 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:06:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: unclosed character literal
+val input = Source.fromResource("Example.txt").getLines(').toList
+                                                        ^
+2022.12.01 06:06:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: unclosed character literal
+val input = Source.fromResource("Example.txt").getLines(').toList
+                                                        ^
+2022.12.01 06:06:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:6:3: stale bloop error: Not found: Day01Part1
+  Day01Part1
+  ^^^^^^^^^^
+2022.12.01 06:06:20 INFO  time: compiled aoc2023 in 0.21s
+2022.12.01 06:06:21 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: unclosed character literal
+val input = Source.fromResource("Example.txt").getLines(').toList
+                                                        ^
+2022.12.01 06:06:21 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:6:3: stale bloop error: Not found: Day01Part1
+  Day01Part1
+  ^^^^^^^^^^
+2022.12.01 06:06:21 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: unclosed character literal
+val input = Source.fromResource("Example.txt").getLines(').toList
+                                                        ^
+2022.12.01 06:06:21 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:6:3: stale bloop error: Not found: Day01Part1
+  Day01Part1
+  ^^^^^^^^^^
+2022.12.01 06:06:21 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: unclosed character literal
+val input = Source.fromResource("Example.txt").getLines(').toList
+                                                        ^
+2022.12.01 06:06:21 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:6:3: stale bloop error: Not found: Day01Part1
+  Day01Part1
+  ^^^^^^^^^^
+2022.12.01 06:06:21 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: unclosed character literal
+val input = Source.fromResource("Example.txt").getLines(').toList
+                                                        ^
+2022.12.01 06:06:21 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:6:3: stale bloop error: Not found: Day01Part1
+  Day01Part1
+  ^^^^^^^^^^
+2022.12.01 06:06:22 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: unclosed character literal
+val input = Source.fromResource("Example.txt").getLines(').toList
+                                                        ^
+2022.12.01 06:06:22 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:6:3: stale bloop error: Not found: Day01Part1
+  Day01Part1
+  ^^^^^^^^^^
+2022.12.01 06:06:22 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: unclosed character literal
+val input = Source.fromResource("Example.txt").getLines(').toList
+                                                        ^
+2022.12.01 06:06:22 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:6:3: stale bloop error: Not found: Day01Part1
+  Day01Part1
+  ^^^^^^^^^^
+2022.12.01 06:06:23 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: unclosed character literal
+val input = Source.fromResource("Example.txt").getLines(').toList
+                                                        ^
+2022.12.01 06:06:23 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:6:3: stale bloop error: Not found: Day01Part1
+  Day01Part1
+  ^^^^^^^^^^
+2022.12.01 06:06:23 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:06:23 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: empty character literal
+val input = Source.fromResource("Example.txt").getLines('').toList
+                                                        ^
+2022.12.01 06:06:23 INFO  time: compiled aoc2023 in 0.19s
+2022.12.01 06:06:23 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: empty character literal
+val input = Source.fromResource("Example.txt").getLines('').toList
+                                                        ^
+2022.12.01 06:06:23 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:57: stale bloop error: empty character literal
+val input = Source.fromResource("Example.txt").getLines('').toList
+                                                        ^
+2022.12.01 06:06:24 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:06:24 INFO  time: compiled aoc2023 in 0.2s
+2022.12.01 06:06:48 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:06:48 INFO  time: compiled aoc2023 in 0.17s
+2022.12.01 06:08:03 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:08:03 INFO  time: compiled aoc2023 in 0.15s
+2022.12.01 06:08:06 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:08:06 INFO  time: compiled aoc2023 in 0.7s
+2022.12.01 06:08:08 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:08:08 INFO  time: compiled aoc2023 in 0.63s
+2022.12.01 06:08:11 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:08:11 INFO  time: compiled aoc2023 in 0.49s
+2022.12.01 06:08:20 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:08:20 INFO  time: compiled aoc2023 in 0.43s
+2022.12.01 06:12:01 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:01 INFO  time: compiled aoc2023 in 0.21s
+2022.12.01 06:12:09 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:09 INFO  time: compiled aoc2023 in 0.17s
+2022.12.01 06:12:10 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:10 INFO  time: compiled aoc2023 in 0.17s
+2022.12.01 06:12:15 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:15 INFO  time: compiled aoc2023 in 0.5s
+2022.12.01 06:12:20 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:20 INFO  time: compiled aoc2023 in 0.67s
+2022.12.01 06:12:27 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:27 INFO  time: compiled aoc2023 in 0.21s
+2022.12.01 06:12:29 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:29 INFO  time: compiled aoc2023 in 0.7s
+2022.12.01 06:12:31 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:31 INFO  time: compiled aoc2023 in 0.68s
+2022.12.01 06:12:32 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:32 INFO  time: compiled aoc2023 in 0.35s
+2022.12.01 06:12:37 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:37 INFO  time: compiled aoc2023 in 0.44s
+2022.12.01 06:12:39 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:39 INFO  time: compiled aoc2023 in 0.39s
+2022.12.01 06:12:43 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:43 INFO  time: compiled aoc2023 in 0.98s
+2022.12.01 06:12:49 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:50 INFO  time: compiled aoc2023 in 1.07s
+2022.12.01 06:12:55 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:12:55 INFO  time: compiled aoc2023 in 0.62s
+2022.12.01 06:13:09 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:13:09 INFO  time: compiled aoc2023 in 0.47s
+2022.12.01 06:13:13 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:13:13 INFO  time: compiled aoc2023 in 0.45s
+2022.12.01 06:13:19 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:13:19 INFO  time: compiled aoc2023 in 0.52s
+Dec 01, 2022 6:13:21 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: assertion failed
+java.lang.AssertionError: assertion failed
+	at scala.Predef$.assert(Predef.scala:264)
+	at scala.Predef$Ensuring$.ensuring$extension(Predef.scala:359)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.find$1(SemanticSymbolBuilder.scala:88)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.addOverloadIdx$1(SemanticSymbolBuilder.scala:93)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.addDescriptor$1(SemanticSymbolBuilder.scala:114)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.addSymName(SemanticSymbolBuilder.scala:146)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.addOwner$1(SemanticSymbolBuilder.scala:75)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.addSymName(SemanticSymbolBuilder.scala:146)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.symbolName(SemanticSymbolBuilder.scala:29)
+	at dotty.tools.dotc.semanticdb.Scala3$SymbolOps$.symbolName(Scala3.scala:266)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerDefinition(ExtractSemanticDB.scala:352)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:182)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1657)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1657)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1529)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1531)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver$$anonfun$1(Trees.scala:1617)
+	at scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:183)
+	at scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:179)
+	at scala.collection.immutable.List.foldLeft(List.scala:79)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1617)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1658)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:179)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$11(ExtractSemanticDB.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:202)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1657)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1657)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1621)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1658)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:176)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$1(ExtractSemanticDB.scala:140)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:140)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:39)
+
+Dec 01, 2022 6:13:22 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: assertion failed
+java.lang.AssertionError: assertion failed
+	at scala.Predef$.assert(Predef.scala:264)
+	at scala.Predef$Ensuring$.ensuring$extension(Predef.scala:359)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.find$1(SemanticSymbolBuilder.scala:88)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.addOverloadIdx$1(SemanticSymbolBuilder.scala:93)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.addDescriptor$1(SemanticSymbolBuilder.scala:114)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.addSymName(SemanticSymbolBuilder.scala:146)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.addOwner$1(SemanticSymbolBuilder.scala:75)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.addSymName(SemanticSymbolBuilder.scala:146)
+	at dotty.tools.dotc.semanticdb.SemanticSymbolBuilder.symbolName(SemanticSymbolBuilder.scala:29)
+	at dotty.tools.dotc.semanticdb.Scala3$SymbolOps$.symbolName(Scala3.scala:266)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerDefinition(ExtractSemanticDB.scala:352)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:182)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1657)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1657)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1529)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1531)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver$$anonfun$1(Trees.scala:1617)
+	at scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:183)
+	at scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:179)
+	at scala.collection.immutable.List.foldLeft(List.scala:79)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1617)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1658)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:179)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$11(ExtractSemanticDB.scala:202)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:202)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1657)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.apply(Trees.scala:1657)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1621)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeTraverser.traverseChildren(Trees.scala:1658)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:176)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$1(ExtractSemanticDB.scala:140)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:140)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:39)
+
+2022.12.01 06:13:27 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:13:27 INFO  time: compiled aoc2023 in 0.48s
+2022.12.01 06:13:31 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:13:31 INFO  time: compiled aoc2023 in 0.28s
+2022.12.01 06:13:50 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:13:50 INFO  time: compiled aoc2023 in 0.81s
+2022.12.01 06:13:57 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:13:59 INFO  time: compiled aoc2023 in 0.96s
+2022.12.01 06:14:10 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:14:10 INFO  time: compiled aoc2023 in 0.94s
+2022.12.01 06:14:18 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:14:18 INFO  time: compiled aoc2023 in 0.4s
+2022.12.01 06:14:23 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:14:23 INFO  time: compiled aoc2023 in 0.36s
+2022.12.01 06:14:26 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:14:26 INFO  time: compiled aoc2023 in 0.18s
+Dec 01, 2022 6:15:04 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 858
+2022.12.01 06:15:05 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:15:05 INFO  time: compiled aoc2023 in 0.41s
+2022.12.01 06:15:14 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:15:14 INFO  time: compiled aoc2023 in 0.24s
+2022.12.01 06:15:14 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:14:15: stale bloop error: Recursive value output needs type
+  println(s"${output}")
+              ^
+2022.12.01 06:15:14 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:13: stale bloop error: missing argument for parameter f of method groupBy in trait IterableOps: (f: String => K): Map[K, List[String @uncheckedVariance]]
+val input = Source.fromResource("Example.txt").getLines.toList.groupBy()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2022.12.01 06:15:14 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:14:15: stale bloop error: Recursive value output needs type
+  println(s"${output}")
+              ^
+2022.12.01 06:15:14 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:13: stale bloop error: missing argument for parameter f of method groupBy in trait IterableOps: (f: String => K): Map[K, List[String @uncheckedVariance]]
+val input = Source.fromResource("Example.txt").getLines.toList.groupBy()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2022.12.01 06:15:16 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:15:16 INFO  time: compiled aoc2023 in 0.49s
+2022.12.01 06:15:16 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:15:17 INFO  time: compiled aoc2023 in 0.4s
+2022.12.01 06:15:20 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:15:20 INFO  time: compiled aoc2023 in 0.21s
+2022.12.01 06:15:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:14:15: stale bloop error: Recursive value output needs type
+  println(s"${output}")
+              ^
+2022.12.01 06:15:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:13: stale bloop error: missing argument for parameter f of method groupBy in trait IterableOps: (f: String => K): Map[K, List[String @uncheckedVariance]]
+val input = Source.fromResource("Example.txt").getLines.toList.groupBy()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2022.12.01 06:15:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:14:15: stale bloop error: Recursive value output needs type
+  println(s"${output}")
+              ^
+2022.12.01 06:15:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:13: stale bloop error: missing argument for parameter f of method groupBy in trait IterableOps: (f: String => K): Map[K, List[String @uncheckedVariance]]
+val input = Source.fromResource("Example.txt").getLines.toList.groupBy()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2022.12.01 06:15:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:14:15: stale bloop error: Recursive value output needs type
+  println(s"${output}")
+              ^
+2022.12.01 06:15:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:13: stale bloop error: missing argument for parameter f of method groupBy in trait IterableOps: (f: String => K): Map[K, List[String @uncheckedVariance]]
+val input = Source.fromResource("Example.txt").getLines.toList.groupBy()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2022.12.01 06:15:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:14:15: stale bloop error: Recursive value output needs type
+  println(s"${output}")
+              ^
+2022.12.01 06:15:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:13: stale bloop error: missing argument for parameter f of method groupBy in trait IterableOps: (f: String => K): Map[K, List[String @uncheckedVariance]]
+val input = Source.fromResource("Example.txt").getLines.toList.groupBy()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2022.12.01 06:15:22 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:15:22 INFO  time: compiled aoc2023 in 0.39s
+2022.12.01 06:15:26 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:15:26 INFO  Deduplicating compilation of aoc2023 from bsp client 'Metals 0.11.9' (since 24m 17.179s)
+2022.12.01 06:15:26 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:15:26 INFO  time: compiled aoc2023 in 0.31s
+2022.12.01 06:16:47 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:16:47 INFO  time: compiled aoc2023 in 0.14s
+2022.12.01 06:16:49 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:16:49 INFO  time: compiled aoc2023 in 0.54s
+2022.12.01 06:17:06 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:17:06 INFO  time: compiled aoc2023 in 0.32s
+2022.12.01 06:17:09 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:17:09 INFO  time: compiled aoc2023 in 0.36s
+2022.12.01 06:17:13 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:17:13 INFO  time: compiled aoc2023 in 0.17s
+2022.12.01 06:17:15 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:17:15 INFO  time: compiled aoc2023 in 0.14s
+2022.12.01 06:17:18 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:17:18 INFO  time: compiled aoc2023 in 0.12s
+2022.12.01 06:17:24 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:17:24 INFO  time: compiled aoc2023 in 0.32s
+2022.12.01 06:17:28 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:17:28 INFO  time: compiled aoc2023 in 0.42s
+2022.12.01 06:17:32 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:17:32 INFO  time: compiled aoc2023 in 0.4s
+2022.12.01 06:17:58 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:17:58 INFO  time: compiled aoc2023 in 0.31s
+2022.12.01 06:18:01 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:01 INFO  time: compiled aoc2023 in 0.12s
+2022.12.01 06:18:08 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:08 INFO  time: compiled aoc2023 in 0.33s
+2022.12.01 06:18:11 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:11 INFO  time: compiled aoc2023 in 0.36s
+2022.12.01 06:18:12 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:12 INFO  time: compiled aoc2023 in 0.17s
+2022.12.01 06:18:13 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:16: stale bloop error: missing argument for parameter n of method splitAt in class List: (n: Int): (List[String], List[String])
+  val output = input.splitAt()
+               ^^^^^^^^^^^^^^^
+2022.12.01 06:18:13 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:16: stale bloop error: missing argument for parameter n of method splitAt in class List: (n: Int): (List[String], List[String])
+  val output = input.splitAt()
+               ^^^^^^^^^^^^^^^
+2022.12.01 06:18:13 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:16: stale bloop error: missing argument for parameter n of method splitAt in class List: (n: Int): (List[String], List[String])
+  val output = input.splitAt()
+               ^^^^^^^^^^^^^^^
+2022.12.01 06:18:13 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:16: stale bloop error: missing argument for parameter n of method splitAt in class List: (n: Int): (List[String], List[String])
+  val output = input.splitAt()
+               ^^^^^^^^^^^^^^^
+2022.12.01 06:18:14 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:16: stale bloop error: missing argument for parameter n of method splitAt in class List: (n: Int): (List[String], List[String])
+  val output = input.splitAt()
+               ^^^^^^^^^^^^^^^
+2022.12.01 06:18:14 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:14 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: empty character literal
+  val output = input.splitAt('')
+                             ^
+2022.12.01 06:18:14 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: empty character literal
+  val output = input.splitAt('')
+                             ^
+2022.12.01 06:18:14 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:14:3: stale bloop error: Not found: 'println
+  println(s"${input}")
+  ^^^^^^^
+2022.12.01 06:18:14 INFO  time: compiled aoc2023 in 0.16s
+2022.12.01 06:18:16 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: empty character literal
+  val output = input.splitAt('')
+                             ^
+2022.12.01 06:18:16 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:14:3: stale bloop error: Not found: 'println
+  println(s"${input}")
+  ^^^^^^^
+2022.12.01 06:18:16 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: empty character literal
+  val output = input.splitAt('')
+                             ^
+2022.12.01 06:18:16 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:14:3: stale bloop error: Not found: 'println
+  println(s"${input}")
+  ^^^^^^^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: empty character literal
+  val output = input.splitAt('')
+                             ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:14:3: stale bloop error: Not found: 'println
+  println(s"${input}")
+  ^^^^^^^
+2022.12.01 06:18:17 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                             ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                             ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:33: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                                ^
+2022.12.01 06:18:17 INFO  time: compiled aoc2023 in 0.2s
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                             ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:33: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                                ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                             ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:33: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                                ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                             ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:33: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                                ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                             ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:33: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                                ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                             ^
+2022.12.01 06:18:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:33: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                                ^
+2022.12.01 06:18:18 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                             ^
+2022.12.01 06:18:18 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:33: stale bloop error: unclosed character literal
+  val output = input.splitAt(']n')
+                                ^
+2022.12.01 06:18:18 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:18 INFO  time: compiled aoc2023 in 0.4s
+2022.12.01 06:18:21 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:21 INFO  time: compiled aoc2023 in 0.49s
+2022.12.01 06:18:31 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:31 INFO  time: compiled aoc2023 in 0.47s
+Dec 01, 2022 6:18:35 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1199
+2022.12.01 06:18:37 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:37 INFO  time: compiled aoc2023 in 0.61s
+2022.12.01 06:18:50 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: Found:    collection.immutable.Nil.type
+Required: Int
+  val output = input.splitAt(Nil)
+                             ^^^
+2022.12.01 06:18:50 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: Found:    collection.immutable.Nil.type
+Required: Int
+  val output = input.splitAt(Nil)
+                             ^^^
+2022.12.01 06:18:52 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: Found:    collection.immutable.Nil.type
+Required: Int
+  val output = input.splitAt(Nil)
+                             ^^^
+2022.12.01 06:18:52 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: Found:    collection.immutable.Nil.type
+Required: Int
+  val output = input.splitAt(Nil)
+                             ^^^
+2022.12.01 06:18:52 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: Found:    collection.immutable.Nil.type
+Required: Int
+  val output = input.splitAt(Nil)
+                             ^^^
+2022.12.01 06:18:52 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:52 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed string literal
+  val output = input.splitAt(")
+                             ^
+2022.12.01 06:18:52 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed string literal
+  val output = input.splitAt(")
+                             ^
+2022.12.01 06:18:52 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed string literal
+  val output = input.splitAt(")
+                             ^
+2022.12.01 06:18:52 INFO  time: compiled aoc2023 in 0.28s
+2022.12.01 06:18:53 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:53 INFO  time: compiled aoc2023 in 0.38s
+2022.12.01 06:18:55 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:18:55 INFO  time: compiled aoc2023 in 0.9s
+2022.12.01 06:18:59 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: Found:    ("\r\n" : String)
+Required: Int
+  val output = input.splitAt("\r\n")
+                             ^^^^^^
+2022.12.01 06:18:59 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: Found:    ("\r\n" : String)
+Required: Int
+  val output = input.splitAt("\r\n")
+                             ^^^^^^
+2022.12.01 06:19:02 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:19:02 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt('\r\n')
+                             ^
+2022.12.01 06:19:02 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt('\r\n')
+                             ^
+2022.12.01 06:19:02 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:35: stale bloop error: unclosed character literal
+  val output = input.splitAt('\r\n')
+                                  ^
+2022.12.01 06:19:02 INFO  time: compiled aoc2023 in 0.22s
+2022.12.01 06:19:03 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt('\r\n')
+                             ^
+2022.12.01 06:19:03 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:35: stale bloop error: unclosed character literal
+  val output = input.splitAt('\r\n')
+                                  ^
+2022.12.01 06:19:03 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:30: stale bloop error: unclosed character literal
+  val output = input.splitAt('\r\n')
+                             ^
+2022.12.01 06:19:03 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:12:35: stale bloop error: unclosed character literal
+  val output = input.splitAt('\r\n')
+                                  ^
+2022.12.01 06:19:18 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:19:18 INFO  time: compiled aoc2023 in 0.69s
+2022.12.01 06:19:21 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:19:21 INFO  time: compiled aoc2023 in 0.23s
+2022.12.01 06:19:21 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:19:28 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+Dec 01, 2022 6:19:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1350
+2022.12.01 06:19:29 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:19:30 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:19:30 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:19:31 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:19:31 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:19:31 INFO  time: compiled aoc2023 in 0.2s
+2022.12.01 06:19:31 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:19:53 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+Dec 01, 2022 6:19:54 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1382
+2022.12.01 06:19:56 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:19:56 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:19:56 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:19:57 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:19:57 INFO  time: compiled aoc2023 in 0.18s
+2022.12.01 06:19:58 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:03 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:03 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:03 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:05 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:20:05 INFO  time: compiled aoc2023 in 0.19s
+2022.12.01 06:20:05 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:06 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:07 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:08 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:20:08 INFO  time: compiled aoc2023 in 0.46s
+2022.12.01 06:20:08 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:09 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:10 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:20:10 INFO  time: compiled aoc2023 in 0.43s
+2022.12.01 06:20:10 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:11 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:20:11 INFO  time: compiled aoc2023 in 0.6s
+2022.12.01 06:20:12 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:39 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:39 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:39 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:39 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:39 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:40 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:40 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:20:42 INFO  time: compiled aoc2023 in 1.22s
+2022.12.01 06:20:42 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:42 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:43 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:20:43 INFO  time: compiled aoc2023 in 0.7s
+2022.12.01 06:20:44 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:45 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:58 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:58 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:59 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:59 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:20:59 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:21:00 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:21:02 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:21:02 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:21:02 INFO  time: compiled aoc2023 in 0.35s
+2022.12.01 06:21:03 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:21:09 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:21:21 WARN  Could not load snapshot text for /Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala
+2022.12.01 06:21:22 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:21:23 INFO  time: compiled aoc2023 in 1.22s
+2022.12.01 06:23:07 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:23:07 INFO  time: compiled aoc2023 in 0.2s
+2022.12.01 06:23:12 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:23:12 INFO  time: compiled aoc2023 in 0.14s
+2022.12.01 06:23:39 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:23:39 INFO  time: compiled aoc2023 in 0.37s
+2022.12.01 06:23:42 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:23:42 INFO  time: compiled aoc2023 in 0.21s
+2022.12.01 06:23:46 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:23:46 INFO  time: compiled aoc2023 in 0.36s
+2022.12.01 06:23:50 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:23:50 INFO  time: compiled aoc2023 in 0.46s
+2022.12.01 06:23:52 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:79: stale bloop error: 'then' expected, but ')' found
+val input = Source.fromResource("Example.txt").getLines.toList.map(x => if (x))
+                                                                              ^
+2022.12.01 06:23:52 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:77: stale bloop error: Found:    (x : String)
+Required: Boolean
+val input = Source.fromResource("Example.txt").getLines.toList.map(x => if (x))
+                                                                            ^
+2022.12.01 06:23:52 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:79: stale bloop error: 'then' expected, but ')' found
+val input = Source.fromResource("Example.txt").getLines.toList.map(x => if (x))
+                                                                              ^
+2022.12.01 06:23:52 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:77: stale bloop error: Found:    (x : String)
+Required: Boolean
+val input = Source.fromResource("Example.txt").getLines.toList.map(x => if (x))
+                                                                            ^
+2022.12.01 06:23:54 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:23:54 INFO  time: compiled aoc2023 in 0.51s
+2022.12.01 06:23:57 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:23:58 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:88: stale bloop error: 'then' expected, but ')' found
+val input = Source.fromResource("Example.txt").getLines.toList.map(x => if (x == '\n') )
+                                                                                       ^
+2022.12.01 06:23:58 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:88: stale bloop error: 'then' expected, but ')' found
+val input = Source.fromResource("Example.txt").getLines.toList.map(x => if (x == '\n') )
+                                                                                       ^
+2022.12.01 06:23:57 INFO  time: compiled aoc2023 in 0.5s
+2022.12.01 06:23:59 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:23:59 INFO  time: compiled aoc2023 in 0.72s
+2022.12.01 06:24:02 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:24:02 INFO  time: compiled aoc2023 in 0.43s
+2022.12.01 06:24:04 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:24:04 INFO  time: compiled aoc2023 in 0.36s
+2022.12.01 06:24:06 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:24:06 INFO  time: compiled aoc2023 in 0.36s
+Dec 01, 2022 6:24:14 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1709
+2022.12.01 06:24:28 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:77: stale bloop error: Values of types String and Char cannot be compared with == or !=
+val input = Source.fromResource("Example.txt").getLines.toList.map(x => if (x == '\n') "EMPTY")
+                                                                            ^^^^^^^^^
+2022.12.01 06:24:28 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:88: stale bloop warning: A pure expression does nothing in statement position; you may be omitting necessary parentheses
+val input = Source.fromResource("Example.txt").getLines.toList.map(x => if (x == '\n') "EMPTY")
+                                                                                       ^^^^^^^
+2022.12.01 06:24:28 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:77: stale bloop error: Values of types String and Char cannot be compared with == or !=
+val input = Source.fromResource("Example.txt").getLines.toList.map(x => if (x == '\n') "EMPTY")
+                                                                            ^^^^^^^^^
+2022.12.01 06:24:28 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:9:88: stale bloop warning: A pure expression does nothing in statement position; you may be omitting necessary parentheses
+val input = Source.fromResource("Example.txt").getLines.toList.map(x => if (x == '\n') "EMPTY")
+                                                                                       ^^^^^^^
+2022.12.01 06:24:31 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:24:31 INFO  time: compiled aoc2023 in 0.4s
+2022.12.01 06:24:33 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:24:33 INFO  time: compiled aoc2023 in 0.87s
+2022.12.01 06:24:49 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:24:49 INFO  time: compiled aoc2023 in 0.56s
+2022.12.01 06:25:38 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:25:38 INFO  time: compiled aoc2023 in 0.16s
+2022.12.01 06:25:41 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:25:41 INFO  time: compiled aoc2023 in 0.14s
+2022.12.01 06:25:42 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:25:42 INFO  time: compiled aoc2023 in 0.38s
+2022.12.01 06:25:46 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:25:46 INFO  time: compiled aoc2023 in 0.48s
+2022.12.01 06:25:59 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:25:59 INFO  time: compiled aoc2023 in 0.39s
+2022.12.01 06:26:04 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:26:04 INFO  time: compiled aoc2023 in 0.32s
+2022.12.01 06:26:07 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:26:07 INFO  time: compiled aoc2023 in 0.16s
+2022.12.01 06:26:10 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:26:10 INFO  time: compiled aoc2023 in 0.81s
+2022.12.01 06:26:13 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:26:13 INFO  time: compiled aoc2023 in 0.34s
+2022.12.01 06:26:20 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:26:20 INFO  time: compiled aoc2023 in 0.57s
+2022.12.01 06:26:54 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:26:54 INFO  time: compiled aoc2023 in 0.39s
+2022.12.01 06:26:54 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:26:56 INFO  time: compiled aoc2023 in 0.58s
+Dec 01, 2022 6:26:58 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1959
+2022.12.01 06:27:00 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:27:00 INFO  time: compiled aoc2023 in 0.3s
+2022.12.01 06:27:00 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:27:02 INFO  time: compiled aoc2023 in 0.74s
+2022.12.01 06:27:20 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:27:20 INFO  time: compiled aoc2023 in 0.6s
+2022.12.01 06:27:25 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:27:25 INFO  time: compiled aoc2023 in 0.44s
+Dec 01, 2022 6:27:40 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2018
+2022.12.01 06:27:45 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:27:45 INFO  time: compiled aoc2023 in 0.77s
+Dec 01, 2022 6:27:47 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2029
+2022.12.01 06:27:49 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:27:49 INFO  time: compiled aoc2023 in 0.36s
+2022.12.01 06:27:53 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:27:53 INFO  time: compiled aoc2023 in 0.55s
+2022.12.01 06:28:11 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:28:11 INFO  time: compiled aoc2023 in 0.34s
+Dec 01, 2022 6:28:32 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2134
+2022.12.01 06:28:33 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:28:33 INFO  time: compiled aoc2023 in 0.36s
+2022.12.01 06:28:51 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:28:51 INFO  time: compiled aoc2023 in 0.42s
+Dec 01, 2022 6:28:57 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2189
+2022.12.01 06:28:59 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:28:59 INFO  time: compiled aoc2023 in 0.95s
+2022.12.01 06:29:01 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:29:01 INFO  time: compiled aoc2023 in 0.6s
+2022.12.01 06:29:14 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:29:14 INFO  time: compiled aoc2023 in 0.41s
+2022.12.01 06:29:16 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:29:16 INFO  time: compiled aoc2023 in 0.83s
+2022.12.01 06:29:18 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:29:19 INFO  time: compiled aoc2023 in 1.06s
+2022.12.01 06:29:26 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:29:26 INFO  time: compiled aoc2023 in 0.52s
+2022.12.01 06:29:30 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:29:30 INFO  time: compiled aoc2023 in 0.39s
+2022.12.01 06:29:33 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:29:33 INFO  time: compiled aoc2023 in 0.42s
+2022.12.01 06:32:05 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:05 INFO  time: compiled aoc2023 in 0.42s
+2022.12.01 06:32:07 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:07 INFO  time: compiled aoc2023 in 0.39s
+2022.12.01 06:32:10 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:10 INFO  time: compiled aoc2023 in 0.4s
+Dec 01, 2022 6:32:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2450
+2022.12.01 06:32:13 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:13 INFO  time: compiled aoc2023 in 0.37s
+2022.12.01 06:32:17 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:17 INFO  time: compiled aoc2023 in 0.23s
+2022.12.01 06:32:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:17 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:18 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:18 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:18 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:18 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:19 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:19 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:19 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:20 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:12: stale bloop error: unclosed string literal
+  println(s"output)
+           ^
+2022.12.01 06:32:21 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:21 INFO  time: compiled aoc2023 in 0.39s
+2022.12.01 06:32:27 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:27 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:24: stale bloop error: unclosed string literal
+  println(s"${output(1)")
+                       ^
+2022.12.01 06:32:27 INFO  time: compiled aoc2023 in 0.19s
+2022.12.01 06:32:27 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:24: stale bloop error: unclosed string literal
+  println(s"${output(1)")
+                       ^
+2022.12.01 06:32:28 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:23:24: stale bloop error: unclosed string literal
+  println(s"${output(1)")
+                       ^
+2022.12.01 06:32:27 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:28 INFO  time: compiled aoc2023 in 0.55s
+2022.12.01 06:32:42 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:42 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:16:12: stale bloop error: unclosed string literal
+  println(s"Day 1 - part 1: output)
+           ^
+2022.12.01 06:32:42 INFO  time: compiled aoc2023 in 0.35s
+2022.12.01 06:32:43 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:16:12: stale bloop error: unclosed string literal
+  println(s"Day 1 - part 1: output)
+           ^
+2022.12.01 06:32:43 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:16:12: stale bloop error: unclosed string literal
+  println(s"Day 1 - part 1: output)
+           ^
+2022.12.01 06:32:43 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:16:12: stale bloop error: unclosed string literal
+  println(s"Day 1 - part 1: output)
+           ^
+2022.12.01 06:32:44 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:44 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:16:36: stale bloop error: unclosed string literal
+  println(s"Day 1 - part 1: $output)
+                                   ^
+2022.12.01 06:32:44 INFO  time: compiled aoc2023 in 0.17s
+2022.12.01 06:32:46 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:16:36: stale bloop error: unclosed string literal
+  println(s"Day 1 - part 1: $output)
+                                   ^
+2022.12.01 06:32:46 INFO  file:///Users/katherine/Desktop/Personal/AOC2023/src/main/scala/Day01.scala:16:36: stale bloop error: unclosed string literal
+  println(s"Day 1 - part 1: $output)
+                                   ^
+2022.12.01 06:32:47 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:47 INFO  time: compiled aoc2023 in 0.5s
+2022.12.01 06:32:52 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:52 INFO  time: compiled aoc2023 in 0.39s
+2022.12.01 06:32:55 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:55 INFO  time: compiled aoc2023 in 0.37s
+2022.12.01 06:32:57 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:32:57 INFO  time: compiled aoc2023 in 0.31s
+2022.12.01 06:33:01 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:33:01 INFO  time: compiled aoc2023 in 0.15s
+2022.12.01 06:33:04 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:33:04 INFO  time: compiled aoc2023 in 0.36s
+2022.12.01 06:33:08 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:33:08 INFO  time: compiled aoc2023 in 0.5s
+2022.12.01 06:33:27 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:33:27 INFO  time: compiled aoc2023 in 0.48s
+2022.12.01 06:33:51 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:33:51 INFO  time: compiled aoc2023 in 0.41s
+2022.12.01 06:34:11 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:34:11 INFO  time: compiled aoc2023 in 0.36s
+2022.12.01 06:34:15 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:34:15 INFO  time: compiled aoc2023 in 0.38s
+2022.12.01 06:35:26 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:35:26 INFO  time: compiled aoc2023 in 0.14s
+2022.12.01 06:35:30 INFO  compiling aoc2023 (1 scala source)
+2022.12.01 06:35:30 INFO  time: compiled aoc2023 in 0.31s
