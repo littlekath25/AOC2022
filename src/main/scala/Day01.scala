@@ -7,17 +7,14 @@ import scala.io.Source
   Day01Part2
 
 val input = Source.fromResource("Example.txt").mkString
+val combinedList = input.split("\n\n").toList.map(_.split("\n").map(_.toInt).toList.sum)
 
 def Day01Part1 =
-  val combinedList: List[List[String]] = input.split("\n\n").toList.map(_.split("\n").toList)
-  val convertedList: List[Int] = combinedList.flatMap(_.map(_.toInt))
-  val answer: Int = convertedList.max
+  val answer = combinedList.max
 
   println(s"Day 1 - part 1: $answer")
 
 def Day01Part2 =
-  val combinedList: List[List[String]] = input.split("\n\n").toList.map(_.split("\n").toList)
-  val convertedList: List[Int] = combinedList.flatMap(_.map(_.toInt)).sorted.reverse
-  val answer: Int = convertedList.take(3).sum
+  val answer = combinedList.sorted.reverse.take(3).sum
 
-  println(s"Day 1 - part 2: $answer")
+  println(s"Day 1 - part 2: ${answer}")
