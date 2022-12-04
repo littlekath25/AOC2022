@@ -2,12 +2,10 @@ package AOC2022
 import scala.io.Source
 
 object Day00 {
-  val input = Source.fromResource("Day00.txt").getLines.toList
-
   def Day00Part1 =
     val answer = ???
 
-    println(s"Day 1 - part 1: $answer")
+    println(s"Day 1 - part 1: $boards2")
 
   def Day00Part2 =
     val answer = ???

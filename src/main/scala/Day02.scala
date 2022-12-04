@@ -77,7 +77,7 @@ object Day02 {
 
     println(s"Day 2 - part 2: $answer")
 
-  def main(args: Array[String]): Unit =
-    Day02Part1
-    Day02Part2
+  // def main(args: Array[String]): Unit =
+  //   Day02Part1
+  //   Day02Part2
 }
