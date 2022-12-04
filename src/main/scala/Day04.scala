@@ -2,11 +2,8 @@ package AOC2022
 import scala.io.Source
 
 object Day04 {
-  val input = Source.fromResource("Day04.txt").getLines.map { pairs => 
-    val splitted = pairs.split(",")
-    val firstElf = splitted(0).split("-").map(_.toInt).toArray
-    val secondElf = splitted(1).split("-").map(_.toInt).toArray
-    ((firstElf(0) to firstElf(1)), (secondElf(0) to secondElf(1)))
+  val input = Source.fromResource("Day04.txt").getLines.map {
+    case (s"${r1}-${r2},${r3}-${r4}") => ((r1.toInt to r2.toInt), (r3.toInt to r4.toInt))
   }.toList
 
   def Day04Part1 =
