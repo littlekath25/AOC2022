@@ -4,9 +4,9 @@ import scala.io.Source
 object Day04 {
   val input = Source.fromResource("Day04.txt").getLines.map { pairs => 
     val splitted = pairs.split(",")
-    val one = splitted(0).split("-").map(_.toInt).toArray
-    val two = splitted(1).split("-").map(_.toInt).toArray
-    ((one(0) to one(1)), (two(0) to two(1)))
+    val firstElf = splitted(0).split("-").map(_.toInt).toArray
+    val secondElf = splitted(1).split("-").map(_.toInt).toArray
+    ((firstElf(0) to firstElf(1)), (secondElf(0) to secondElf(1)))
   }.toList
 
   def Day04Part1 =
