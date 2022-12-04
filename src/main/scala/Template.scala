@@ -2,7 +2,7 @@ package AOC2022
 import scala.io.Source
 
 object Day00 {
-  val input = Source.fromResource("Day00.txt")
+  val input = Source.fromResource("Day00.txt").getLines.toList
 
   def Day00Part1 =
     val answer = ???
