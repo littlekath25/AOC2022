@@ -10,17 +10,17 @@ object Day04 {
   }.toList
 
   def Day04Part1 =
-    val answer = input.map { elves => 
+    val answer = input.count { elves => 
       val overlappingTasks = elves._1.intersect(elves._2)
       (overlappingTasks == elves._1 || overlappingTasks == elves._2)
-    }.filter(_ == true).size
+    }
 
     println(s"Day 4 - part 1: $answer")
 
   def Day04Part2 =
-    val answer = input.map { elves =>
+    val answer = input.count { elves =>
       elves._1.intersect(elves._2).nonEmpty
-    }.filter(_ == true).size
+    }
 
     println(s"Day 4 - part 2: ${answer}")
 
