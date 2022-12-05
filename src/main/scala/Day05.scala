@@ -1,6 +1,5 @@
 package AOC2022
 import scala.io.Source
-import scala.collection.mutable
 
 object Day05 {
   type MyBox = List[(BoxStack, Int)]
@@ -36,29 +35,25 @@ object Day05 {
         currentBox
     }
 
+  def repeatMoving(moves: Int)(from: Int, to: Int, input: MyBox) : MyBox =
+    if (moves > 0)
+      val newBoxes = moveBox(1, from, to, input)
+      repeatMoving(moves - 1)(from, to, newBoxes)
+    else
+      input
+
+  def getAnswer(boxes: MyBox) : String =
+    boxes.map((boxes, idx) => boxes.boxes.last).mkString
+
   def Day05Part1 =
-    def repeatMoving(moves: Int)(from: Int, to: Int, input: MyBox) : MyBox =
-      if (n > 0) {
-        val newBoxes = moveBox(1, from, to, input)
-        repeatMoving(n - 1)(from, to, newBoxes)
-      }
-      else
-        input
+    val newStackBoxes = instructions.foldLeft(boxes) { case ((mybox), (times, from, to)) => repeatMoving(times)(from - 1, to -1, mybox) }
 
-    val newStackOfBoxes = instructions.foldLeft(boxes) {
-      case ((mybox), (times, from, to)) => repeatMoving(times)(from - 1, to -1, mybox)
-    }
-    val answer = newStackOfBoxes.map((boxes, idx) => boxes.boxes.last).mkString
-
-    println(s"Day 5 - part 1: ${answer}")
+    println(s"Day 5 - part 1: ${getAnswer(newStackBoxes)}")
 
   def Day05Part2 =
-    val newStackOfBoxes = instructions.foldLeft(boxes) {
-      case ((mybox), (times, from, to)) => moveBox(times, from - 1, to -1, mybox)
-    }
-    val answer = newStackOfBoxes.map((boxes, idx) => boxes.boxes.last).mkString
+    val newStackBoxes = instructions.foldLeft(boxes) { case ((mybox), (times, from, to)) => moveBox(times, from - 1, to -1, mybox) }
 
-    println(s"Day 5 - part 2: ${answer}")
+    println(s"Day 5 - part 2: ${getAnswer(newStackBoxes)}")
 
   def main(args: Array[String]): Unit =
     Day05Part1
