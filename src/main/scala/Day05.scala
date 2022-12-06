@@ -5,23 +5,28 @@ object Day05 {
   type MyBox = List[(BoxStack, Int)]
   case class BoxStack(boxes: List[Char])
 
-  val instructions =
+  val input = 
     Source.fromResource("Day05.txt")
-    .getLines.map {
+    .getLines
+    .toList
+
+  val instructions =
+    input
+    .dropWhile(!_.startsWith("m"))
+    .map {
       case (s"move $box from $from to $to") => ((box.toInt, from.toInt, to.toInt))
     }.toList
 
   val boxes =
-    Source.fromResource("Day05-Boxes.txt")
-      .getLines
-      .map(_.toList)
-      .toList
-      .transpose
-      .filter( row =>
-        row.exists(_.isLetterOrDigit)
-      ).map( row =>
-        (BoxStack(row.filter(_ != ' ').slice(0, row.size - 1).reverse), row.last.asDigit)
-      )
+    input
+    .takeWhile(!_.isEmpty)
+    .toList
+    .transpose
+    .filter( row =>
+      row.exists(_.isLetterOrDigit)
+    ).map( row =>
+      (BoxStack(row.filter(_ != ' ').slice(0, row.size - 1).reverse), row.last.asDigit)
+    )
 
   def moveBox(times: Int, from: Int, to: Int, boxes: MyBox, reverse: Boolean) : MyBox =
     val copyOfOldBoxes = boxes(from - 1)._1.boxes
@@ -48,12 +53,12 @@ object Day05 {
     getAnswer(newStackBoxes)
 
   def Day05Part1 =
-    println(s"Day 5 - part 1: ${solve(true)}")
+    println(s"Day 05 - part 1: ${solve(true)}")
 
   def Day05Part2 =
-    println(s"Day 5 - part 2: ${solve(false)}")
+    println(s"Day 05 - part 2: ${solve(false)}")
 
-  def main(args: Array[String]): Unit =
-    Day05Part1
-    Day05Part2
+  // def main(args: Array[String]): Unit =
+  //   Day05Part1
+  //   Day05Part2
 }

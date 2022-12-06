@@ -8,12 +8,12 @@ object Day01 {
   def Day01Part1 =
     val answer = combinedList.max
 
-    println(s"Day 1 - part 1: $answer")
+    println(s"Day 01 - part 1: $answer")
 
   def Day01Part2 =
     val answer = combinedList.sorted.reverse.take(3).sum
 
-    println(s"Day 1 - part 2: ${answer}")
+    println(s"Day 01 - part 2: ${answer}")
 
   // def main(args: Array[String]): Unit =
   //   Day01Part1

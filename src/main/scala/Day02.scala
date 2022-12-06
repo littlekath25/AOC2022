@@ -40,7 +40,7 @@ object Day02 {
           (points + 3 + matchPoint (opp, me))
     }
 
-    println(s"Day 2 - part 1: $answer")
+    println(s"Day 02 - part 1: $answer")
 
   def Day02Part2 = 
     def matchPoint(opp: String, me: String) : Int =
@@ -75,7 +75,7 @@ object Day02 {
           (points + matchPoint (opp, me))
     }
 
-    println(s"Day 2 - part 2: $answer")
+    println(s"Day 02 - part 2: $answer")
 
   // def main(args: Array[String]): Unit =
   //   Day02Part1
