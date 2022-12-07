@@ -1,87 +1,87 @@
-// package AOC2022
-// import scala.io.Source
-// import scala.annotation.newMain
+package AOC2022
+import scala.io.Source
+import scala.util.matching.Regex
 
-// object Day07 {
-//   case class FileSystem(directories: List[Directory])
-//   case class Directory(name: String, files: List[File], directories: List[Directory])
-//   case class File(size: Int, name: String, extension: Option[String])
+object Day07 {
+  type FileSystem =  Map[String, List[Item]]
+  case class Item(name: String, isDirectory: Boolean, size: Option[Int])
 
-//   val input = Source.fromResource("Example.txt").getLines.toList
+  val input = Source.fromResource("Example.txt").getLines.toList
 
-//   def createFile(name: String) : File =
-//     name match {
-//       case (s"$size ${name}.${extension}") => 
-//         File(size.toInt, name, Some(extension))
-//       case (s"$size $name") => 
-//         File(size.toInt, name, None)
-//       }
-    
-//   def createDirectory(name: String): Directory =
-//     Directory(name, List.empty, List.empty)
+  def getNewPath(currentPath: String, to: String) : String =
+    if (currentPath == to) 
+      currentPath 
+    else if (to == "..") 
+      currentPath.substring(0, currentPath.lastIndexWhere(_ == '/')) 
+    else if (currentPath == "/") 
+      currentPath + to 
+    else currentPath + "/" + to
 
-//   def overviewDirectory(current: Directory, input: List[String], filesystem: FileSystem) : FileSystem =
-//     input match {
-//       case head :: next => head match {
-//         case (s"$$ $instr") =>
-//           listFiles(current, input, filesystem)
-//         case (s"dir $name") =>
-//           val updatedDir = current.copy(directories = current.directories ::: List(createDirectory(name)))
-//           overviewDirectory(updatedDir, next, filesystem.copy(directories = List(updatedDir)))
-//         case x =>
-//           val updatedDir = current.copy(files = current.files ::: List(createFile(x)))
-//           overviewDirectory(updatedDir, next, filesystem)
-//       }
-//       case Nil => filesystem
-//     }
+  def createNewItems(currentPath: String, input: List[String], filesystem: FileSystem): FileSystem =
+    var newSystem = filesystem
+    if (!filesystem.exists(_._1 == currentPath))
+      newSystem = filesystem + (currentPath -> List.empty)
+    input match {
+      case head :: next => head match {
+        case s"$$ cd $to" =>
+          mapOverInput(currentPath, input, newSystem)
+        case s"dir $dir" =>
+          val newItem = newSystem(currentPath) ::: List(Item(dir, true, None))
+          createNewItems(currentPath, next, newSystem + (currentPath -> newItem))
+        case s"$size $file" =>
+          val newItem = newSystem(currentPath) ::: List(Item(file, false, Some(size.toInt)))
+          createNewItems(currentPath, next, newSystem + (currentPath -> newItem))
+        }
+    case _ => newSystem
+  }
 
-//   def listFiles(current: Directory, input: List[String], filesystem: FileSystem) : FileSystem =
-//     input match {
-//         case head :: next => head match {
-//           case (s"$$ cd $name") => println(s"TRYINT TO GO TO: $name from ${current.name}"); goToDirectory(name, next, filesystem, current.name)
-//           case (s"$$ ls") =>
-//             overviewDirectory(current, next, filesystem)
-//           case _ => filesystem
-//         }
-//         case Nil => filesystem
-//       }
+  def mapOverInput(currentPath: String, input: List[String], filesystem: FileSystem): FileSystem =
+    input match {
+      case head :: next => head match {
+        case s"$$ cd $to" =>
+          val newPath = getNewPath(currentPath, to)
+          mapOverInput(newPath, next, filesystem)
+        case s"$$ ls" =>
+          createNewItems(currentPath, next, filesystem)
+        case _ =>
+          mapOverInput(currentPath, next, filesystem)
+        }
+    case _ => filesystem
+  }
 
-//   def getCorrectDirectory(current: String, to: String, filesystem: FileSystem) : Directory =
-//     val found = filesystem.directories.find(_.name == current).get.directories.find(_.name == to).get
-//     found
+  val startingMap = Map("/" -> List.empty)
+  val newMap = mapOverInput("/", input, startingMap)
+  val summedMap = newMap.map { directory =>
+    (directory._1, directory._2.filter(_.size != None))
+  }.map { directory =>
+    (directory._1, directory._2.map(_.size.get).sum)
+  }
 
-//   def goToDirectory(to: String, input: List[String], filesystem: FileSystem, current: String) : FileSystem =
-//     if (to == "/")
-//       listFiles(filesystem.directories.head, input, filesystem)
-//     else
-//       val currentDirectory = getCorrectDirectory(current, to, filesystem)
-//       listFiles(currentDirectory, input, filesystem)
+  def Day07Part1 =
+    val answer = summedMap.map { directory =>
+      val allKeys = summedMap.filter(_._1.startsWith(directory._1))
+      allKeys.foldLeft(0)(_ + _._2)
+    }
 
-//   def iterateThroughFiles(input: List[String], filesystem: FileSystem, current: String): FileSystem =
-//     input match {
-//       case head :: next => head match {
-//         case (s"$$ cd $to") =>
-//           val newsystem = goToDirectory(to, next, filesystem, current)
-//           newsystem
-//       }
-//       case Nil => filesystem
-//     }
-      
-//   def Day07Part1 =
-//     val answer = iterateThroughFiles(input, 
-//       FileSystem(
-//         List(
-//           Directory("/", List.empty, List.empty)
-//           )), "/")
+    val answer2 = summedMap.map { directory =>
+      summedMap.filter(_._1.startsWith(directory._1))
+    }
 
-//     println(s"Day 07 - part 1: $answer")
+    println(s"TEST: $answer2")
+    // println(s"Day 07 - part 1: ${answer.filter(_ < 100000).sum}")
 
-//   def Day07Part2 =
-//     val answer = ???
+  def Day07Part2 =
+    val answer = summedMap.map { directory =>
+      val allKeys = summedMap.filter(_._1.startsWith(directory._1))
+      allKeys.foldLeft(0)(_ + _._2)
+    }
 
-//     println(s"Day 07 - part 2: ${answer}")
+    val spaceOver = 70000000 - answer.max
+    val spaceNeed = 30000000 - spaceOver
 
-//   def main(args: Array[String]): Unit =
-//     Day07Part1
-//   //   Day07Part2
-// }
+    println(s"Day 07 - part 2: ${answer.filter(_ > spaceNeed).min}")
+
+  def main(args: Array[String]): Unit =
+    Day07Part1
+    Day07Part2
+}
