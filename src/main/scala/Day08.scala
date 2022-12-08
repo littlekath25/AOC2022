@@ -38,8 +38,6 @@ object Day08 {
   def getScenicScore(tree: (Int, (Int, Int)), treesInFront: List[(Int, (Int, Int))], acc: Int): Int =
     treesInFront match {
       case head :: next if (head._1 >= tree._1) => 
-          // println(s"COMPARE: ${head._1} WITH ${tree._1}")
-          // println("YES GO OUT")
           acc + 1
       case head :: next =>
         getScenicScore(tree, next, acc + 1)
@@ -47,15 +45,10 @@ object Day08 {
     }
 
   def lookAround(forrest: List[(Int, (Int, Int))], tree: (Int, (Int, Int))): Int =
-    val top = forrest.filter(treeList => treeList._2._1 < tree._2._1 && treeList._2._2 == tree._2._2).reverse
-    val bottom = forrest.filter(treeList => treeList._2._1 > tree._2._1 && treeList._2._2 == tree._2._2)
-    val left = forrest.filter(treeList => treeList._2._1 == tree._2._1 && treeList._2._2 < tree._2._2).reverse
-    val right = forrest.filter(treeList => treeList._2._1 == tree._2._1 && treeList._2._2 > tree._2._2)
-    val scoreTop = getScenicScore(tree, top, 0)
-    val scoreBottom = getScenicScore(tree, bottom, 0)
-    val scoreLeft = getScenicScore(tree, left, 0)
-    val scoreRight = getScenicScore(tree, right, 0)
-    // println(s"FOR THE TREE ${tree._1}(${tree._2})\nSCORE: $scoreTop + $scoreBottom + $scoreLeft + $scoreRight\n")
+    val scoreTop = getScenicScore(tree, forrest.filter(treeList => treeList._2._1 < tree._2._1 && treeList._2._2 == tree._2._2).reverse, 0)
+    val scoreBottom = getScenicScore(tree,forrest.filter(treeList => treeList._2._1 > tree._2._1 && treeList._2._2 == tree._2._2), 0)
+    val scoreLeft = getScenicScore(tree,forrest.filter(treeList => treeList._2._1 == tree._2._1 && treeList._2._2 < tree._2._2).reverse, 0)
+    val scoreRight = getScenicScore(tree,forrest.filter(treeList => treeList._2._1 == tree._2._1 && treeList._2._2 > tree._2._2), 0)
     scoreTop * scoreBottom * scoreLeft * scoreRight
 
   val trees = getHighestTree(input1).flatten ::: getHighestTree(input2).flatten ::: getHighestTree(input3).flatten ::: getHighestTree(input4).flatten
@@ -70,7 +63,6 @@ object Day08 {
     val input3 = input2
     val answer = input2.map(x => lookAround(input3, x)).max
 
-    // println(s"Day 08 - part 2: ${lookAround(input2, (5, (4, 3)))}")
     println(s"Day 08 - part 2: ${answer}")
 
   def main(args: Array[String]): Unit =
