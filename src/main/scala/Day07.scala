@@ -1,12 +1,12 @@
 package AOC2022
 import scala.io.Source
-import scala.util.matching.Regex
+import scala.util.matching.Regex 
 
 object Day07 {
   type FileSystem =  Map[String, List[Item]]
   case class Item(name: String, isDirectory: Boolean, size: Option[Int])
 
-  val input = Source.fromResource("Example.txt").getLines.toList
+  val input = Source.fromResource("Day07.txt").getLines.toList
 
   def getNewPath(currentPath: String, to: String) : String =
     if (currentPath == to) 
@@ -57,31 +57,23 @@ object Day07 {
     (directory._1, directory._2.map(_.size.get).sum)
   }
 
-  def Day07Part1 =
-    val answer = summedMap.map { directory =>
+  val summedSummerMap = summedMap.map { directory =>
       val allKeys = summedMap.filter(_._1.startsWith(directory._1))
       allKeys.foldLeft(0)(_ + _._2)
     }
 
-    val answer2 = summedMap.map { directory =>
-      summedMap.filter(_._1.startsWith(directory._1))
-    }
+  def Day07Part1 =
+    val answer = summedSummerMap.filter(_ < 100000).sum
 
-    println(s"TEST: $answer2")
-    // println(s"Day 07 - part 1: ${answer.filter(_ < 100000).sum}")
+    println(s"Day 07 - part 1: ${answer}")
 
   def Day07Part2 =
-    val answer = summedMap.map { directory =>
-      val allKeys = summedMap.filter(_._1.startsWith(directory._1))
-      allKeys.foldLeft(0)(_ + _._2)
-    }
+    val spaceNeed = 30000000 - (70000000 - summedSummerMap.max)
+    val answer = summedSummerMap.filter(_ > spaceNeed).min
 
-    val spaceOver = 70000000 - answer.max
-    val spaceNeed = 30000000 - spaceOver
+    println(s"Day 07 - part 2: ${answer}")
 
-    println(s"Day 07 - part 2: ${answer.filter(_ > spaceNeed).min}")
-
-  def main(args: Array[String]): Unit =
-    Day07Part1
-    Day07Part2
+  // def main(args: Array[String]): Unit =
+  //   Day07Part1
+  //   Day07Part2
 }
