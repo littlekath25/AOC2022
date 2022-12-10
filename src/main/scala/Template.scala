@@ -4,7 +4,7 @@ object Day00 {
   val input = Source.fromResource("Example.txt").getLines
 
   def Day00Part1 =
-    val answer = ???
+    
 
     println(s"Day 00 - part 1: ${input}")
 

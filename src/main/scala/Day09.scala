@@ -6,7 +6,7 @@ object Day09 {
   def Day09Part1 =
     def checkIfTouching(tail: (Int, Int), head: (Int, Int)): Boolean =
       val difference = ((tail._1 - head._1).abs, (tail._2 - head._2).abs)
-      val touchingOrNot = !(difference._1 > 1 || difference._2 > 1) || (difference._1 < -1 || difference._2 < -1)
+      val touchingOrNot = !(difference._1 > 1 || difference._2 > 1)
       touchingOrNot
 
     val input = Source.fromResource("Example.txt").getLines.map{ instr => val splitted = instr.split(" "); (splitted(0), splitted(1).toInt)}.toList
@@ -57,7 +57,7 @@ object Day09 {
         ((newBridgeMapAndCoords._1, newHeadCoords, newBridgeMapAndCoords._2))
     }
 
-    println(s"Day 08 - part 1: ${answer._1.flatten.toList.count(_ == "#")}")
+    println(s"Day 09 - part 1: ${answer._1.flatten.toList.count(_ == "#")}")
 
   def Day09Part2 =
     case class Move(direction: String, moves: Int)
@@ -72,7 +72,7 @@ object Day09 {
         }
     }
 
-    val moves = Source.fromResource("Example.txt").getLines
+    val moves = Source.fromResource("Day09.txt").getLines
       .map{ instr => 
         val splitted = instr.split(" ");
         Move(splitted(0), splitted(1).toInt)
@@ -82,33 +82,35 @@ object Day09 {
     val visited = List((0, 0))
 
     def checkIfTouching(head: (Int, Int), tail: (Int, Int)): Boolean =
-      val difference = ((head._1.abs - tail._1.abs), (head._2.abs - tail._2.abs))
-      // println(s"CHECK IF TOUCHING $head AND $tail - DIFFERENCE: $difference")
-      val touchingOrNot = !(difference._1 > 1 || difference._2 > 1)
+      val difference = ((head._1 - tail._1).abs, (head._2 - tail._2).abs)
+      val touchingOrNot = !(difference._1.abs > 1 || difference._2.abs > 1)
       touchingOrNot
 
     def moveToKnot(previous: Knot, current: Knot): Array[Knot] = 
-      val distance = ((previous.position._1.abs - current.position._1.abs), (previous.position._2.abs - current.position._2.abs))
-      val movedKnot = distance match {
-        case (distance) => 
-          if (distance._1 == 0 && distance._2 == 2) 
-            Knot(current.position._1, current.position._2 + 1)
-          else if (distance._1 == 0 && distance._2 == -2) 
+      val movedKnot = 
+        if (previous.position._1 == current.position._1)
+          if (previous.position._2 < current.position._2) 
             Knot(current.position._1, current.position._2 - 1)
-          else if (distance._1 == 2 && distance._2 == 0) 
-            Knot(current.position._1 - 1, current.position._2)
-          else if (distance._1 == -2 && distance._2 == 0) 
-            Knot(current.position._1 + 1, current.position._2) 
-
-          else if (distance._1 > 0 && distance._2 > 0) 
-            Knot(current.position._1 - 1, current.position._2 + 1)
-          else if (distance._1 < 0 && distance._2 < 0) 
-            Knot(current.position._1 + 1, current.position._2 - 1)
-          else if (distance._1 > 0 && distance._2 < 0) 
-            Knot(current.position._1 - 1, current.position._2 - 1)
           else
+            Knot(current.position._1, current.position._2 + 1)
+
+        else if (previous.position._2 == current.position._2)
+          if (previous.position._1 < current.position._1) 
+            Knot(current.position._1 - 1, current.position._2)
+          else
+            Knot(current.position._1 + 1, current.position._2)
+
+        else if (previous.position._1 > current.position._1)
+          if (previous.position._2 > current.position._2)
             Knot(current.position._1 + 1, current.position._2 + 1)
-      }
+          else
+            Knot(current.position._1 + 1, current.position._2 - 1)
+
+        else if (previous.position._1 < current.position._1 && previous.position._2 > current.position._2)
+            Knot(current.position._1 - 1, current.position._2 + 1)
+        else
+          Knot(current.position._1 - 1, current.position._2 - 1)
+
       Array(movedKnot)
 
     def stayOrMove(knots: Array[Knot], visited: List[(Int, Int)]): (Array[Knot], List[(Int, Int)]) =
@@ -126,20 +128,8 @@ object Day09 {
             listKnots.concat(moveToKnot(previousKnot, currentKnot))
         }
         
-        println(s"AFTER NOT TOUCHING")
-        knotsTail.foreach {
-          println
-        }
-        println
-
         (knotsTail, visited ::: List(knotsTail.last.position))
       else
-        println(s"ALREADY TOUCHING")
-        knots.foreach {
-          println
-        }
-        println
-
         (knots, visited)
 
     def moveTheSnake(knots: Array[Knot], move: Move, visited: List[(Int, Int)]): (Array[Knot], List[(Int, Int)]) =
@@ -151,11 +141,10 @@ object Day09 {
 
     val answer = moves.foldLeft(knots, visited) {
       case ((knots, visited), move) =>
-        println(s"THE MOVE IS: $move")
         moveTheSnake(knots, move, visited)
     }
 
-    println(s"Day 08 - part 2: ${answer._2.distinct}")
+    println(s"Day 09 - part 2: ${answer._2.distinct.size}")
 
   // def main(args: Array[String]): Unit =
   //   Day09Part1
