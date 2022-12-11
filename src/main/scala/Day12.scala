@@ -1,20 +1,20 @@
 package AOC2022
 import scala.io.Source
 
-object Day00 {
+object Day12 {
   val input = Source.fromResource("Example.txt").getLines
 
-  def Day00Part1 =
+  def Day12Part1 =
     val answer = ???
 
-    println(s"Day 00 - part 1: ${input}")
+    println(s"Day 12 - part 1: ${input}")
 
-  def Day00Part2 =
+  def Day12Part2 =
     val answer = ???
 
-    println(s"Day 00 - part 2: ${answer}")
+    println(s"Day 12 - part 2: ${answer}")
 
   // def main(args: Array[String]): Unit =
-  //   Day00Part1
-  //   Day00Part2
+  //   Day12Part1
+  //   Day12Part2
 }

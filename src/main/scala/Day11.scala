@@ -4,9 +4,8 @@ import scala.collection.mutable.Stack
 
 object Day11 {
   var modulus = 0
-
   val input = Source.fromResource("Day11.txt").getLines.toList.map(_.trim).filter(_.nonEmpty).grouped(6).toList
-  
+
   case class Monkey(name: Int, items: Stack[Long], operation: (String, Int), test: Int, ifTrue: Int, ifFalse: Int, inspected: Int)
 
   def testItem(one: Long, two: Long): Boolean =
@@ -16,15 +15,13 @@ object Day11 {
       false
 
   def operationForItems(one: Long, two: Long, instr: String): Long =
-    var numberToDo = two
-    if (two == -1)
-      numberToDo = one
     val newValue =
-      if (instr == "+")
-        one + numberToDo
+      if (two == -1)
+      one * one
+      else if (instr == "+")
+        one + two
       else
-        one * numberToDo
-    // println(s"NEW VALUE: $one $instr $two -> ${newValue / 3}")
+        one * two
     newValue % modulus
 
   def parseInput(input: List[List[String]], monkeys: List[Monkey]): List[Monkey] =
@@ -80,7 +77,6 @@ object Day11 {
   def goThroughMonkeys(monkeys: List[Monkey]) : List[Monkey] =
     monkeys.foldLeft(monkeys) {
       case (group, monkey) => 
-        // println(s"NOW AT MONKEY: ${monkey.name}")
         val newSetup = singleMonkeyRound(monkey, group)
         newSetup
     }
@@ -94,18 +90,18 @@ object Day11 {
   def Day11Part1 =
     val monkeys = parseInput(input, List.empty)
     modulus = 3
-    val newMonkeyList = goRounds(monkeys, 20).map(monkey => monkey.inspected).sorted.reverse
+    val newMonkeyList = goRounds(monkeys, 20).map(monkey => monkey.inspected).sorted.reverse.take(2)
 
     println(s"Day 11 - part 1: ${newMonkeyList(0) * newMonkeyList(1)}")
 
   def Day11Part2 =
     val monkeys = parseInput(input, List.empty)
     modulus = monkeys.map(_.test).product
-    val newMonkeyList = goRounds(monkeys, 10000).map(monkey => monkey.inspected).sorted
+    val newMonkeyList = goRounds(monkeys, 10000).map(monkey => monkey.inspected).sorted.reverse.take(2)
 
-    println(s"Day 11 - part 2: ${newMonkeyList}")
+    println(s"Day 11 - part 2: ${(newMonkeyList(0) * newMonkeyList(1).toLong)}")
 
-  def main(args: Array[String]): Unit =
-    Day11Part1
-    Day11Part2
+  // def main(args: Array[String]): Unit =
+  //   Day11Part1
+  //   Day11Part2
 }
