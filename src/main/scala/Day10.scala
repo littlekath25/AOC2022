@@ -37,7 +37,7 @@ object Day10 {
       
     def drawOrNot(sprite: Sprite, pos: Int, grid: Array[Char]): (Sprite, Int, Array[Char]) =
       if (check(pos % 40, sprite))
-        (sprite, pos + 1, grid.updated((pos), '#'))
+        (sprite, pos + 1, grid.updated((pos), '♦'))
       else
         (sprite, pos + 1, grid)
 
@@ -61,14 +61,14 @@ object Day10 {
         }
     }
 
-    val answerFile = new PrintWriter(new File("src/main/resources/Day10-answer.txt"))
+    val answerFile = new PrintWriter(new File("src/main/resources/generated/Day10.txt"))
     answer._1._3.grouped(40).toList.foreach { line =>
       answerFile.write(line)
       answerFile.write("\n")
     }
     answerFile.close
 
-    println(s"Day 10 - part 2: Day10-answer.txt ")
+    println(s"Day 10 - part 2: generated/Day10.txt ")
 
   // def main(args: Array[String]): Unit =
   //   Day10Part1

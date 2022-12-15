@@ -37,7 +37,7 @@ object Day09 {
         (current._1, current._2 - moves)
       else
         (current._1, current._2 + moves)
-    
+
     def moveUntil(bridgeMap: Array[Array[String]], head: (Int, Int), tail: (Int, Int), to: (Int, Int)): (Array[Array[String]], (Int, Int)) =
       bridgeMap(tail._1)(tail._2) = "#"
       if (head != to)

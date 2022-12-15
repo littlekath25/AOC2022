@@ -84,7 +84,7 @@ object Day13 {
 
     println(s"Day 13 - part 2: ${indexOf2 * indexOf6}")
 
-  def main(args: Array[String]): Unit =
-    Day13Part1
-    Day13Part2
+  // def main(args: Array[String]): Unit =
+  //   Day13Part1
+  //   Day13Part2
 }
