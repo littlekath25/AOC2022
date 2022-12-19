@@ -86,16 +86,16 @@ object Day18 {
     }
     total
 
-  def Day18Part1 =
-    val answer = calculateTouchingCubes(input)
+  // def Day18Part1 =
+  //   val answer = calculateTouchingCubes(input)
 
-    println(s"Day 18 - part 1: ${answer}")
+  //   println(s"Day 18 - part 1: ${answer}")
 
-  def Day18Part2 =
-    val steamGrid = breathFirstSearch(start)
-    val answer = getExterior(steamGrid)
+  // def Day18Part2 =
+  //   val steamGrid = breathFirstSearch(start)
+  //   val answer = getExterior(steamGrid)
 
-    println(s"Day 18 - part 2: ${answer}")
+  //   println(s"Day 18 - part 2: ${answer}")
 
   // def main(args: Array[String]): Unit =
   //   Day18Part1

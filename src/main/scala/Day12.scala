@@ -62,14 +62,14 @@ object Day12 {
       }
     }
 
-  def Day12Part1 =
-    getShortestPath(queue, shortestPath, visited, queue.size)
-    println(s"Day 12 - part 1: ${shortestPath(start.y)(start.x)}")
+  // def Day12Part1 =
+  //   getShortestPath(queue, shortestPath, visited, queue.size)
+  //   println(s"Day 12 - part 1: ${shortestPath(start.y)(start.x)}")
 
-  def Day12Part2 =
-    val zipped = input.flatten.zip(coords).zip(shortestPath.flatten).filter(value => value._1._1 == 'a' ||  value._1._1 == 'S').map(value => value._2).min
+  // def Day12Part2 =
+  //   val zipped = input.flatten.zip(coords).zip(shortestPath.flatten).filter(value => value._1._1 == 'a' ||  value._1._1 == 'S').map(value => value._2).min
 
-    println(s"Day 12 - part 2: ${zipped}")
+  //   println(s"Day 12 - part 2: ${zipped}")
 
   // def main(args: Array[String]): Unit =
   //   Day12Part1

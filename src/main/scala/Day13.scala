@@ -67,22 +67,22 @@ object Day13 {
       inOrder = true
     inOrder
 
-  def Day13Part1 =
-    val input = file.filter(_.nonEmpty).grouped(2).toList.map(pair => (pair.head, pair.last))
-    val calculatedList = input.map((first, second) => solve(first, second)).zipWithIndex
-    val onlyTrue = calculatedList.filter(x => x._1 == true).map(_._2 + 1)
+  // def Day13Part1 =
+  //   val input = file.filter(_.nonEmpty).grouped(2).toList.map(pair => (pair.head, pair.last))
+  //   val calculatedList = input.map((first, second) => solve(first, second)).zipWithIndex
+  //   val onlyTrue = calculatedList.filter(x => x._1 == true).map(_._2 + 1)
 
-    println(s"Day 13 - part 1: ${onlyTrue.sum}")
-    clearQueue
+  //   println(s"Day 13 - part 1: ${onlyTrue.sum}")
+  //   clearQueue
 
-  def Day13Part2 =
-    val newFile = file.filter(_.nonEmpty) ::: List("[[2]]", "[[6]]")
-    val calculatedList = newFile.sortWith((first, second) => solve(first, second)).zipWithIndex
+  // def Day13Part2 =
+  //   val newFile = file.filter(_.nonEmpty) ::: List("[[2]]", "[[6]]")
+  //   val calculatedList = newFile.sortWith((first, second) => solve(first, second)).zipWithIndex
 
-    val indexOf2 = calculatedList.find((str, idx) => str == "[[2]]").get._2 + 1
-    val indexOf6 = calculatedList.find((str, idx) => str == "[[6]]").get._2 + 1
+  //   val indexOf2 = calculatedList.find((str, idx) => str == "[[2]]").get._2 + 1
+  //   val indexOf6 = calculatedList.find((str, idx) => str == "[[6]]").get._2 + 1
 
-    println(s"Day 13 - part 2: ${indexOf2 * indexOf6}")
+  //   println(s"Day 13 - part 2: ${indexOf2 * indexOf6}")
 
   // def main(args: Array[String]): Unit =
   //   Day13Part1

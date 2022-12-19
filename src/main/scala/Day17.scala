@@ -144,13 +144,13 @@ object Day17 {
     else
       grid
 
-  def Day17Part1 =
-    val newgrid = moveRockUntillBottom(grid, 0, 0, 2022)
-    println(s"Day 17 - part 1: ${newgrid.count(row => row.contains('♥'))}")
+  // def Day17Part1 =
+  //   val newgrid = moveRockUntillBottom(grid, 0, 0, 2022)
+  //   println(s"Day 17 - part 1: ${newgrid.count(row => row.contains('♥'))}")
 
-  def Day17Part2 =
-    val newgrid = moveRockUntillBottom(grid, 0, 0, 1000000000000)
-    println(s"Day 17 - part 2: ${newgrid.count(row => row.contains('♥'))}")
+  // def Day17Part2 =
+  //   val newgrid = moveRockUntillBottom(grid, 0, 0, 1000000000000)
+  //   println(s"Day 17 - part 2: ${newgrid.count(row => row.contains('♥'))}")
 
   // def main(args: Array[String]): Unit =
     // Day17Part1

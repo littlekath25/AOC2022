@@ -88,12 +88,12 @@ object Day16 {
   //   val answer = findPath(30)
   //   println(s"Day 16 - part 1: ${answer}")
 
-  def Day16Part2 =
-    val total = findPath(26)
+  // def Day16Part2 =
+  //   val total = findPath(26)
     
-    println(s"Day 16 - part 2: ${personDistance.size}")
-    println
-    println(s"Day 16 - part 2: ${elephantDistance.size}")
+  //   println(s"Day 16 - part 2: ${personDistance.size}")
+  //   println
+  //   println(s"Day 16 - part 2: ${elephantDistance.size}")
     // println
     // println(s"Day 16 - part 2: ${total}")
 

@@ -55,11 +55,11 @@ object Day15 {
   def calculateTuningFrequency(distressBeacon: Pos): Long = 
     (distressBeacon.x * 4000000) + distressBeacon.y
 
-  def Day15Part1 =
-    println(s"Day 15 - part 1: ${solve(input, 2000000)}")
+  // def Day15Part1 =
+  //   println(s"Day 15 - part 1: ${solve(input, 2000000)}")
 
-  def Day15Part2 =
-    println(s"Day 15 - part 2: ${calculateTuningFrequency(solve2(input, 4000000, 0))}")
+  // def Day15Part2 =
+  //   println(s"Day 15 - part 2: ${calculateTuningFrequency(solve2(input, 4000000, 0))}")
 
   // def main(args: Array[String]): Unit =
   //   Day15Part1

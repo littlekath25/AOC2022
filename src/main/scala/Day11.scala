@@ -87,19 +87,19 @@ object Day11 {
     else
       monkeys
 
-  def Day11Part1 =
-    val monkeys = parseInput(input, List.empty)
-    modulus = 3
-    val newMonkeyList = goRounds(monkeys, 20).map(monkey => monkey.inspected).sorted.reverse.take(2)
+  // def Day11Part1 =
+  //   val monkeys = parseInput(input, List.empty)
+  //   modulus = 3
+  //   val newMonkeyList = goRounds(monkeys, 20).map(monkey => monkey.inspected).sorted.reverse.take(2)
 
-    println(s"Day 11 - part 1: ${newMonkeyList(0) * newMonkeyList(1)}")
+  //   println(s"Day 11 - part 1: ${newMonkeyList(0) * newMonkeyList(1)}")
 
-  def Day11Part2 =
-    val monkeys = parseInput(input, List.empty)
-    modulus = monkeys.map(_.test).product
-    val newMonkeyList = goRounds(monkeys, 10000).map(monkey => monkey.inspected).sorted.reverse.take(2)
+  // def Day11Part2 =
+  //   val monkeys = parseInput(input, List.empty)
+  //   modulus = monkeys.map(_.test).product
+  //   val newMonkeyList = goRounds(monkeys, 10000).map(monkey => monkey.inspected).sorted.reverse.take(2)
 
-    println(s"Day 11 - part 2: ${(newMonkeyList(0) * newMonkeyList(1).toLong)}")
+  //   println(s"Day 11 - part 2: ${(newMonkeyList(0) * newMonkeyList(1).toLong)}")
 
   // def main(args: Array[String]): Unit =
   //   Day11Part1

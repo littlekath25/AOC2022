@@ -93,14 +93,14 @@ object Day14 {
     else
       sand
 
-  def Day14Part1 =
-    println(s"ay 14 - part 1: ${fillCave(0)}")
-    printToFile("Day14-01.txt")
-    grid.map(row => row.map(ch => '.'))
+  // def Day14Part1 =
+  //   println(s"ay 14 - part 1: ${fillCave(0)}")
+  //   printToFile("Day14-01.txt")
+  //   grid.map(row => row.map(ch => '.'))
 
-  def Day14Part2 =
-    println(s"Day 14 - part 2: ${fillCave(0)}")
-    printToFile("Day14-02.txt")
+  // def Day14Part2 =
+  //   println(s"Day 14 - part 2: ${fillCave(0)}")
+  //   printToFile("Day14-02.txt")
 
   // def main(args: Array[String]): Unit =
     // Day14Part1
