@@ -4,8 +4,7 @@ import scala.collection.mutable._
 
 object Day20 {
   case class Node(value: Long, var previous: Node, var next: Node)
-
-  val input = Source.fromResource("Example.txt").getLines.map(_.toLong).to(scala.collection.mutable.ArrayBuffer)
+  val input = Source.fromResource("Day20.txt").getLines.map(_.toLong).to(scala.collection.mutable.ArrayBuffer)
 
   def createCircularLinkedList(input: ArrayBuffer[Long], key: Long): ArrayBuffer[Node] =
     var converToNodes = input.map { number =>
@@ -34,8 +33,8 @@ object Day20 {
   def moveNodes(nodes: ArrayBuffer[Node], rounds: Int): ArrayBuffer[Node] =
     if (rounds > 0)
       for (node <- nodes) do
-        val placesToMove = node.value
-        val range = (0L until placesToMove.abs)
+        val placesToMove = (node.value % (nodes.size - 1)).toInt
+        val range = (0L until placesToMove.abs.toLong)
 
         if (placesToMove < 0L)
           for (i <- range)
@@ -85,12 +84,12 @@ object Day20 {
       println(s"${node.previous.value} ${node.value} ${node.next.value}")
     }
 
-  // def Day20Part1 =
-  //   val parsed = createCircularLinkedList(input, 1)
-  //   val movedNodes = moveNodes(parsed, 1)
-    // val (first, second, third) = (checkPosition(movedNodes, 1000), checkPosition(movedNodes, 2000), checkPosition(movedNodes, 3000))
+  def Day20Part1 =
+    val parsed = createCircularLinkedList(input, 1)
+    val movedNodes = moveNodes(parsed, 1)
+    val (first, second, third) = (checkPosition(movedNodes, 1000), checkPosition(movedNodes, 2000), checkPosition(movedNodes, 3000))
 
-    // println(s"Day 20 - part 1: ${first + second + third}")
+    println(s"Day 20 - part 1: ${first + second + third}")
 
   def Day20Part2 =
     val parsed = createCircularLinkedList(input, 811589153L)
@@ -99,7 +98,7 @@ object Day20 {
 
     println(s"Day 20 - part 2:  ${first + second + third}")
 
-  def main(args: Array[String]): Unit =
-    // Day20Part1
-    Day20Part2
+  // def main(args: Array[String]): Unit =
+  //   Day20Part1
+  //   Day20Part2
 }
