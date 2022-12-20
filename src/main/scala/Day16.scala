@@ -6,8 +6,7 @@ object Day16 {
   case class Valve(flowRate: Int, valves: Vector[String])
 
   val start = "AA"
-
-  val input = Source.fromResource("Example.txt").getLines.map{ row => row match
+  val input = Source.fromResource("Day16.txt").getLines.map{ row => row match
     case (s"Valve $name has flow rate=$rate; $t $l to $v $valves") =>
       val splitted = valves.split(",").map(_.trim).toVector
       name -> Valve(rate.toInt, splitted)
@@ -55,29 +54,47 @@ object Day16 {
 
   val openValves: ArrayBuffer[String] = scala.collection.mutable.ArrayBuffer.empty
 
-  val person = List("AA", "BB", "CC", "DD", "EE").combinations(2).toList
-  val elephant = List("AA", "FF", "GG", "HH", "II", "JJ").combinations(2).toList
+  // def findPath(limit: Int, start: String = start, time: Int = 0): Int =
+  //   if (withPressure.size != openValves.size)
+  //     var totalPressure = 0
+  //     withPressure.foreach { valve =>
+  //       if (openValves.contains(valve._1) || !distances.contains((start, valve._1)))
+  //         valve
+  //       else
+  //         val timeToOpen = time + distances((start, valve._1)) + 1
+  //         if (timeToOpen <= limit)
+  //           val pressure = valve._2.flowRate * (limit - timeToOpen)
+  //           openValves += valve._1
+  //           val recursivePressure = findPath(limit, valve._1, timeToOpen)
+  //           totalPressure = totalPressure.max(pressure + recursivePressure)
+  //     }
+  //     totalPressure
+  //   else
+  //     0
 
-  val personDistance = distances.filter(combo => 
-    person.contains(List(combo._1._1, combo._1._2)) || 
-    person.contains(List(combo._1._2, combo._1._1)) ||
-    person.contains(List(combo._1._1, combo._1._1)) || 
-    person.contains(List(combo._1._2, combo._1._2)))
-
-  val elephantDistance = distances.filter(combo => !personDistance.contains(combo._1))
-
-  def findPath(limit: Int, start: String = start, time: Int = 0): Int =
+  def findPathWithElephant(limit: Int, current: String = start, currentElephant: String = start, time: Int = 0, timeElephant: Int = 0): Int =
     if (withPressure.size != openValves.size)
       var totalPressure = 0
       withPressure.foreach { valve =>
-        if (openValves.contains(valve._1) || !elephantDistance.contains((start, valve._1)))
+        if (openValves.contains(valve._1) || !distances.contains((start, valve._1)))
           valve
         else
-          val timeToOpen = time + elephantDistance((start, valve._1)) + 1
-          if (timeToOpen <= limit)
+          var destination = valve._1
+          val timeToOpen = time + distances((current, destination)) + 1
+          val timeToOpenElephant = timeElephant + distances((currentElephant, destination)) + 1
+
+          if (timeToOpen <= timeToOpenElephant && timeToOpen <= limit)
             val pressure = valve._2.flowRate * (limit - timeToOpen)
-            openValves += valve._1
-            val recursivePressure = findPath(limit, valve._1, timeToOpen)
+            openValves += destination
+            val recursivePressure = findPathWithElephant(limit, destination, currentElephant, timeToOpen, timeElephant)
+            openValves -= destination
+            totalPressure = totalPressure.max(pressure + recursivePressure)
+
+          else if (timeToOpenElephant <= timeToOpen && timeToOpenElephant <= limit)
+            val pressure = valve._2.flowRate * (limit - timeToOpenElephant)
+            openValves += destination
+            val recursivePressure = findPathWithElephant(limit, current, destination, time, timeToOpenElephant)
+            openValves -= destination
             totalPressure = totalPressure.max(pressure + recursivePressure)
       }
       totalPressure
@@ -89,13 +106,8 @@ object Day16 {
   //   println(s"Day 16 - part 1: ${answer}")
 
   // def Day16Part2 =
-  //   val total = findPath(26)
-    
-  //   println(s"Day 16 - part 2: ${personDistance.size}")
-  //   println
-  //   println(s"Day 16 - part 2: ${elephantDistance.size}")
-    // println
-    // println(s"Day 16 - part 2: ${total}")
+  //   val total = findPathWithElephant(26)
+  //   println(s"$total")
 
   // def main(args: Array[String]): Unit =
     // Day16Part1
