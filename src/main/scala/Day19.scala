@@ -8,7 +8,7 @@ object Day19 {
     case ClayRobot
     case ObsidianRobot
     case GeodeRobot
-    case Nothing
+    case Harvest
 
   import RobotType._
 
@@ -23,32 +23,35 @@ object Day19 {
         case ClayRobot      => Minerals(0, 1, 0, 0)
         case ObsidianRobot  => Minerals(0, 0, 1, 0)
         case GeodeRobot     => Minerals(0, 0, 0, 1)
-        case Nothing        => minerals
+        case Harvest        => minerals
       }}.foldLeft(Minerals(0, 0, 0, 0))(_ plus _)
  
     def buildRobot(action: RobotType): List[RobotType] =
       action match {
-        case OreRobot      => robots.concat(List(OreRobot))
-        case ClayRobot     => robots.concat(List(ClayRobot))
-        case ObsidianRobot => robots.concat(List(ObsidianRobot))
-        case GeodeRobot    => robots.concat(List(GeodeRobot))
-        case Nothing       => robots
+        case OreRobot      => robots.appended(OreRobot)
+        case ClayRobot     => robots.appended(ClayRobot)
+        case ObsidianRobot => robots.appended(ObsidianRobot)
+        case GeodeRobot    => robots.appended(GeodeRobot)
+        case Harvest       => robots
       }
 
+    def enoughOre(robot: RobotType): Boolean =
+      minerals.ore >= shop(robot).ore
+
     def generateActions: List[RobotType] =
-      val oreRobot: Option[RobotType] = if (minerals.ore >= shop(OreRobot).ore && robots.count(_ == OreRobot) <= (highestOreCost)) Some(OreRobot) else None
-      val clayRobot: Option[RobotType] = if (minerals.ore >= shop(ClayRobot).ore && robots.count(_ == ClayRobot) <= shop(ObsidianRobot).clay) Some(ClayRobot) else None
-      val obsidianRobot: Option[RobotType] = if (minerals.ore >= shop(ObsidianRobot).ore && minerals.clay >= shop(ObsidianRobot).clay) Some(ObsidianRobot) else None
-      val geodeRobot: Option[RobotType] = if (minerals.ore >= shop(GeodeRobot).ore && minerals.obsidian >= shop(GeodeRobot).obsidian) Some(GeodeRobot) else None
+      val oreRobot: Option[RobotType] = if (enoughOre(OreRobot) && robots.count(_ == OreRobot) <= (highestOreCost)) Some(OreRobot) else None
+      val clayRobot: Option[RobotType] = if (enoughOre(ClayRobot) && robots.count(_ == ClayRobot) <= shop(ObsidianRobot).clay) Some(ClayRobot) else None
+      val obsidianRobot: Option[RobotType] = if (enoughOre(ObsidianRobot) && minerals.clay >= shop(ObsidianRobot).clay) Some(ObsidianRobot) else None
+      val geodeRobot: Option[RobotType] = if (enoughOre(GeodeRobot) && minerals.obsidian >= shop(GeodeRobot).obsidian) Some(GeodeRobot) else None
 
       if (minerals.obsidian >= shop(GeodeRobot).obsidian)
-        List(geodeRobot, Some(Nothing)).flatten
+        List(geodeRobot, Some(Harvest)).flatten
       else if (minerals.clay >= shop(ObsidianRobot).clay)
-        List(geodeRobot, obsidianRobot, Some(Nothing)).flatten
+        List(geodeRobot, obsidianRobot, Some(Harvest)).flatten
       else if (minerals.ore > highestOreCost)
         List(oreRobot, clayRobot, obsidianRobot, geodeRobot).flatten
       else
-        List(oreRobot, clayRobot, obsidianRobot, geodeRobot, Some(Nothing)).flatten
+        List(oreRobot, clayRobot, obsidianRobot, geodeRobot, Some(Harvest)).flatten
     }
 
   final case class Minerals(ore: Int, clay: Int, obsidian: Int, geode: Int) {
@@ -73,40 +76,38 @@ object Day19 {
       ))
   }to(scala.collection.mutable.Map)
 
-  def getMaxGeodes(blueprint: Blueprint, currentMax: Int, limit: Int): Int = 
-    val newMax =
-      if (limit == 0 && (blueprint.minerals.geode + blueprint.robots.count(_ == GeodeRobot)) > currentMax) 
-        (blueprint.minerals.geode + blueprint.robots.count(_ == GeodeRobot))
+  def getMaxGeodes(blueprint: Blueprint, previousGeodes: Int, limit: Int): Int =
+    val currentGeodes = (blueprint.minerals.geode + blueprint.robots.count(_ == GeodeRobot))
+    val newMaxGeodes =
+      if (currentGeodes > previousGeodes) 
+        currentGeodes
       else
-        currentMax
+        previousGeodes
 
-    if (limit == 0)
-      blueprint.minerals.geode + blueprint.robots.count(_ == GeodeRobot)
-    else 
+    if (limit > 0)
       val newActions = blueprint.generateActions
-      newActions.foldLeft(newMax)((max, action) =>
-        if (action == Nothing)
+      newActions.foldLeft(newMaxGeodes)((maxGeodes, action) =>
+        if (action == Harvest)
           val harvestedMinerals = blueprint.harvest.plus(blueprint.minerals)
-          val possibleScore = getMaxGeodes(blueprint.copy(minerals = harvestedMinerals), newMax, limit - 1)
-          if (possibleScore > max) 
-            possibleScore
-          else
-            max
+          val calculatedGeodes = getMaxGeodes(blueprint.copy(minerals = harvestedMinerals), newMaxGeodes, limit - 1)
+          if (calculatedGeodes > maxGeodes) calculatedGeodes else maxGeodes
         else
           val newRobots = blueprint.buildRobot(action)
           val newMinerals = blueprint.minerals.minus(blueprint.shop(action))
           val harvestedMinerals = blueprint.harvest.plus(newMinerals)
-          val possibleScore = getMaxGeodes(blueprint.copy(minerals = harvestedMinerals, robots = newRobots), newMax, limit - 1)
-          if (possibleScore > max) possibleScore else max
+          val calculatedGeodes = getMaxGeodes(blueprint.copy(minerals = harvestedMinerals, robots = newRobots), newMaxGeodes, limit - 1)
+          if (calculatedGeodes > maxGeodes) calculatedGeodes else maxGeodes
       )
+      else
+        currentGeodes
 
-  def Day19Part1 =
-    val answer = blueprints.map(print => getMaxGeodes(print._2, 0, 23) * print._1).sum
-    println(s"Day 19 - part 1: ${answer}")
+  // def Day19Part1 =
+  //   val answer = blueprints.map(print => getMaxGeodes(print._2, 0, 23) * print._1).sum
+  //   println(s"Day 19 - part 1: ${answer}")
 
-  def Day19Part2 =
-    val answer = blueprints.take(3).map(print => getMaxGeodes(print._2, 0, 31)).product
-    println(s"Day 19 - part 2: ${answer}")
+  // def Day19Part2 =
+  //   val answer = blueprints.take(3).map(print => getMaxGeodes(print._2, 0, 31)).product
+  //   println(s"Day 19 - part 2: ${answer}")
 
   // def main(args: Array[String]): Unit =
   //   Day19Part1
