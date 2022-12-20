@@ -3,69 +3,103 @@ import scala.io.Source
 import scala.collection.mutable._
 
 object Day20 {
-  type Original = Int
-  type NewIndex = Int
-  type Value = Int
+  case class Node(value: Long, var previous: Node, var next: Node)
 
-  val original = Source.fromResource("Example.txt").getLines.zipWithIndex.toList.map(x => (x._2 + 1 -> x._1.toInt))
-  val sorted = original.map{case(k,v) => k -> (k, v)}.to(scala.collection.mutable.Map)
+  val input = Source.fromResource("Example.txt").getLines.map(_.toLong).to(scala.collection.mutable.ArrayBuffer)
 
-  def calculateIndex(toShift: Int): Int =
-    val modulod = toShift % original.size
-    if (modulod == 0)
-      original.size
-    else if (modulod < 0)
-      (original.size + modulod) - 1
-    else
-      toShift % original.size
-
-  def shiftOneBackward(shiftMap: Map[Original, (NewIndex, Value)], original: Int, curIdxToShiftFrom: Int, idxToShiftTo: Int): Map[Original, (NewIndex, Value)] =
-    val newShiftedMap = shiftMap.map { pair =>
-      if (pair._1 == original)
-        (pair._1 -> (idxToShiftTo, pair._2._2))
-      else if (pair._2._1 <= idxToShiftTo && pair._2._1 > curIdxToShiftFrom)
-        (pair._1 -> (pair._2._1 - 1, pair._2._2))
-      else if (pair._2._1 > idxToShiftTo && pair._2._1 <= curIdxToShiftFrom)
-        (pair._1 -> (pair._2._1 + 1, pair._2._2))
-      else
-        pair
+  def createCircularLinkedList(input: ArrayBuffer[Long], key: Long): ArrayBuffer[Node] =
+    var converToNodes = input.map { number =>
+      Node(number * key, null, null)
     }
-    // println(s"THE SHIFTED ONE: $newShiftedMap")
-    newShiftedMap
 
-  def shift(shiftMap: Map[Original, (NewIndex, Value)], original: Original, curIdx: Int, newIdx: Int): Map[Original, (NewIndex, Value)] = 
-    val calculatedIdx = calculateIndex(newIdx)
-    // println(s"NEW IDX: $calculatedIdx")
-    shiftOneBackward(shiftMap, original, curIdx, calculatedIdx)
+    converToNodes.zipWithIndex.map { (node, idx) =>
+      if (idx == 0)
+        val nextIndex = idx + 1
+        val previousIndex = converToNodes.size - 1
+        node.previous = converToNodes(previousIndex)
+        node.next = converToNodes(nextIndex)
+      else if (idx == converToNodes.size - 1)
+        val nextIndex = 0
+        val previousIndex = idx - 1
+        node.previous = converToNodes(((idx - 1) % converToNodes.size))
+        node.next = converToNodes(0)
+      else
+        val nextIndex = idx + 1
+        val previousIndex = idx - 1
+        node.previous = converToNodes(previousIndex)
+        node.next = converToNodes(nextIndex)
+    }
+    converToNodes
 
-  def sortingAlgorithm(sorted: Map[Original, (NewIndex, Value)], idx: Int = 1): Map[Original, (NewIndex, Value)] =
-    var newSorted = sorted
-    if (idx > original.size - 1)
-      println(s"THE SORTED LIST: ${newSorted.toSeq.sortBy(x => x._2._1).map(_._2._2)}")
-      sorted
+  def moveNodes(nodes: ArrayBuffer[Node], rounds: Int): ArrayBuffer[Node] =
+    if (rounds > 0)
+      for (node <- nodes) do
+        val placesToMove = node.value
+        val range = (0L until placesToMove.abs)
+
+        if (placesToMove < 0L)
+          for (i <- range)
+            val nextNode = node.next
+            val currentNode = node
+            val previousNode = node.previous
+            val previousPreviousNode = node.previous.previous
+            
+            nextNode.previous = previousNode
+            previousNode.next = nextNode
+            previousNode.previous = currentNode
+            currentNode.next = previousNode
+            currentNode.previous = previousPreviousNode
+            previousPreviousNode.next = currentNode
+
+        else
+          for (i <- range)
+            val nextNextNode = node.next.next
+            val nextNode = node.next
+            val currentNode = node
+            val previousNode = node.previous
+          
+            nextNextNode.previous = currentNode
+            currentNode.next = nextNextNode
+            currentNode.previous = nextNode
+            nextNode.next = currentNode
+            nextNode.previous = previousNode
+            previousNode.next = nextNode
+
+      moveNodes(nodes, rounds - 1)
     else
-      val value = sorted(idx)
-      val newIdx = (value._1 + value._2)
-      // println(s"THTE VALUE WE WANT TO MOVE IS: ${idx} ${sorted(idx)}")
-      newSorted = shift(sorted, idx, value._1, newIdx)
-      // println(s"THE SORTED LIST: ${newSorted.toSeq.sortBy(x => x._2._1).map(_._2._2)}")
-      println(s"THE SORTED LIST: ${newSorted.toSeq.sortBy(x => x._2._1).map(_._2._2)}")
-      sortingAlgorithm(newSorted, idx + 1)
+      nodes
 
-  def Day20Part1 =
-    val answer = sortingAlgorithm(sorted).toSeq.sortBy(x => x._2._1).map(_._2._2)
-    val idxOfZero = answer.indexOf(0)
+  def checkPosition(nodes: ArrayBuffer[Node], numberToCheck: Int): Long =
+    val start = nodes.find(_.value == 0).get
+    var current = start
+    var max: Long = 0
+    var range = Range(0, numberToCheck)
 
-    // println(s"$answer")
-    println(s"GET NUMBER: ${answer((idxOfZero + 1000) % original.size)} ${answer((idxOfZero + 2000) % original.size)} ${answer((idxOfZero + 3000) % original.size)}")
-    // println(s"Day 20 - part 1: ${answer}")
+    for (i <- range)
+      current = current.next
+      max = current.value
+    max
+
+  def printNodes(toPrint: ArrayBuffer[Node]): Unit =
+    toPrint.foreach { node =>
+      println(s"${node.previous.value} ${node.value} ${node.next.value}")
+    }
+
+  // def Day20Part1 =
+  //   val parsed = createCircularLinkedList(input, 1)
+  //   val movedNodes = moveNodes(parsed, 1)
+    // val (first, second, third) = (checkPosition(movedNodes, 1000), checkPosition(movedNodes, 2000), checkPosition(movedNodes, 3000))
+
+    // println(s"Day 20 - part 1: ${first + second + third}")
 
   def Day20Part2 =
-    val answer = ???
+    val parsed = createCircularLinkedList(input, 811589153L)
+    val movedNodes = moveNodes(parsed, 10)
+    val (first, second, third) = (checkPosition(movedNodes, 1000), checkPosition(movedNodes, 2000), checkPosition(movedNodes, 3000))
 
-    println(s"Day 20 - part 2: ${answer}")
+    println(s"Day 20 - part 2:  ${first + second + third}")
 
   def main(args: Array[String]): Unit =
-    Day20Part1
-  //   Day20Part2
+    // Day20Part1
+    Day20Part2
 }
