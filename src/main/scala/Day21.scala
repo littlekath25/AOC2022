@@ -41,7 +41,7 @@ object Day00 {
             case ('-', Some(l), Some(r)) => l - r
             case ('*', Some(l), Some(r)) => l * r
             case ('/', Some(l), Some(r)) => l / r 
-            case _ => sys.error("booboo")
+            case _ => sys.error("dit kan niet")
           }
           numbers += (monkey -> number)
           formulas -= (monkey)
@@ -71,7 +71,7 @@ object Day00 {
         case ('*', Some(x), None) => (rhs, result / x)
         case ('/', None, Some(x)) => (lhs, result * x)
         case ('/', Some(x), None) => (rhs, x / result)
-        case _ => sys.error("booooo")
+        case _ => sys.error("dit kan óók niet")
       }  
       search = newSearch
       result = newResult
