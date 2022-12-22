@@ -11,7 +11,7 @@ object Day17 {
 
   val maxInstrNumber = instructions.size
 
-  def printGrid(grid: Array[Array[Char]]): Unit =
+  def writeGridToFile(grid: Array[Array[Char]]): Unit =
     val answerFile = new PrintWriter(new File(s"src/main/resources/generated/Day17.txt"))
     grid.foreach { line =>
       answerFile.write("|")
@@ -23,7 +23,7 @@ object Day17 {
     }
     answerFile.close
 
-  def printGridInTerminal(grid: Array[Array[Char]]): Unit =
+  def printGrid(grid: Array[Array[Char]]): Unit =
     grid.foreach {row => row.foreach {print}; println}
 
   case class Pos(y: Int, x: Int)
@@ -144,13 +144,13 @@ object Day17 {
     else
       grid
 
-  // def Day17Part1 =
-  //   val newgrid = moveRockUntillBottom(grid, 0, 0, 2022)
-  //   println(s"Day 17 - part 1: ${newgrid.count(row => row.contains('♥'))}")
+  def Day17Part1 =
+    val newgrid = moveRockUntillBottom(grid, 0, 0, 2022)
+    println(s"Day 17 - part 1: ${newgrid.count(row => row.contains('♥'))}")
 
-  // def Day17Part2 =
-  //   val newgrid = moveRockUntillBottom(grid, 0, 0, 1000000000000)
-  //   println(s"Day 17 - part 2: ${newgrid.count(row => row.contains('♥'))}")
+  def Day17Part2 =
+    val newgrid = moveRockUntillBottom(grid, 0, 0, 1000000000000L)
+    println(s"Day 17 - part 2: ${newgrid.count(row => row.contains('♥'))}")
 
   // def main(args: Array[String]): Unit =
     // Day17Part1
