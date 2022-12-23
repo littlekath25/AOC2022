@@ -97,7 +97,7 @@ object Day1702 {
     calculateCycle(heightsOfAllRounds, startGuess, endGuess)
 
   def Day17Part2 =
-    val instructions = io.Source.fromResource("Example.txt").getLines.flatMap(_.toArray).toArray
+    val instructions = io.Source.fromResource("Day17.txt").getLines.flatMap(_.toArray).toArray
 
     val initialGrid = Array.tabulate(8)(Pos(_, 0))
     val initialState = State(instructions, initialGrid, 0, 0, 0)
@@ -106,6 +106,6 @@ object Day1702 {
     
     println(s"Day 17 - part 1: ${answer}")
 
-  def main(args: Array[String]): Unit =
-    Day17Part2
+  // def main(args: Array[String]): Unit =
+  //   Day17Part2
 }
