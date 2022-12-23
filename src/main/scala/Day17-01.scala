@@ -1,12 +1,11 @@
 package AOC2022
-import AOC2022.Day14.grid
 
 import java.io.{File, PrintWriter}
 import scala.io.Source
 import scala.collection.mutable.*
 
-object Day17 {
-  val instructions = Source.fromResource("Example.txt").getLines.flatMap(_.toList).toList
+object Day1701 {
+  val instructions = Source.fromResource("Day17.txt").getLines.flatMap(_.toList).toList
   val grid = Array.tabulate(1, 7)((y, _) => if (y == 0) '_' else '.')
 
   val maxInstrNumber = instructions.size
@@ -148,11 +147,6 @@ object Day17 {
     val newgrid = moveRockUntillBottom(grid, 0, 0, 2022)
     println(s"Day 17 - part 1: ${newgrid.count(row => row.contains('♥'))}")
 
-  def Day17Part2 =
-    val newgrid = moveRockUntillBottom(grid, 0, 0, 1000000000000L)
-    println(s"Day 17 - part 2: ${newgrid.count(row => row.contains('♥'))}")
-
   // def main(args: Array[String]): Unit =
-    // Day17Part1
-    // Day17Part2
+  //   Day17Part1
 }
